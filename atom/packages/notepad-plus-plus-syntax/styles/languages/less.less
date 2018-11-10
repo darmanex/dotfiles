@@ -1,0 +1,58 @@
+@import "colors";
+
+.syntax--source.syntax--less {
+
+  .syntax--function.syntax--color,
+  .syntax--function.syntax--color .syntax--support.syntax--constant,
+  .syntax--variable.syntax--other.syntax--less{
+    color: rgb(220, 3, 132);
+    font-weight: bold;
+    .syntax--punctuation {
+    color: #000;
+    font-weight: normal;
+    }
+    .syntax--punctuation.syntax--definition.syntax--variable {
+    color: inherit;
+    }
+  }
+
+  .syntax--keyword.syntax--control {
+    color: #000;
+    font-weight: normal;
+    &.syntax--html.syntax--elements{
+      color: @blue;
+      &.syntax--svg{
+        color: #000;
+      }
+    }
+    &.syntax--at-rule{
+      color: @blue;
+      font-weight: bold;
+    }
+  }
+
+  /* Correct for :not() */
+  .syntax--key-value + .syntax--keyword.syntax--control,
+  .syntax--key-value + .syntax--property-value .syntax--keyword.syntax--control{
+    color: #ff9600;
+    font-weight: bold;
+  }
+
+  /* Correct for arguments */
+  .syntax--list.syntax--comma + .syntax--color.syntax--support.syntax--constant,
+  .syntax--list.syntax--comma + .syntax--entity.syntax--name.syntax--tag.syntax--custom.syntax--css{
+    color: #000;
+    font-weight: normal
+  }
+
+  .syntax--keyword.syntax--other.syntax--unit,
+  .syntax--constant.syntax--numeric {
+    color: #000;
+    font-weight: bold;
+  }
+
+  .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+    color: @id;
+  }
+
+}

@@ -1,0 +1,62 @@
+.syntax--source.syntax--js {
+
+  .syntax--variable.syntax--language.syntax--js,
+  .syntax--keyword.syntax--operator.syntax--typeof.syntax--js,
+  .syntax--keyword.syntax--operator.syntax--new.syntax--js {
+    color: @blue;
+    font-weight: bold;
+  }
+  .syntax--support.syntax--function.syntax--js,
+  .syntax--support.syntax--constant.syntax--js {
+    color: black;
+    font-weight: normal;
+  }
+
+  /* Infinity, NaN, undefined | Number, Math, Date, String, RegExp */
+  .syntax--constant.syntax--language.syntax--js,
+  .syntax--support.syntax--class.syntax--js {
+    color:#8000ff;
+  }
+  .syntax--constant.syntax--language.syntax--js{
+    font-weight: normal;
+    /* false, true, null */
+    &.syntax--boolean.syntax--js,
+    &.syntax--null.syntax--js {
+      color: @blue;
+      font-weight: bold;
+    }
+  }
+
+  .syntax--entity.syntax--name.syntax--function.syntax--constructor {
+    color:rgb(157, 87, 17);
+    font-weight: bold;
+  }
+
+  .syntax--comment.syntax--documentation{
+    .syntax--jsdoc.syntax--class {
+      color: @comment;
+      .syntax--punctuation.syntax--definition {
+        color: inherit;
+      }
+    }
+    .syntax--jsdoc.syntax--instance {
+      background: rgba(78, 136, 78, 0.07);
+      color:@comment;
+      .syntax--punctuation.syntax--definition {
+        color:inherit;
+      }
+    }
+    .syntax--jsdoc.syntax--other {
+      color: @comment;
+    }
+  }
+
+  /* Dom elements (window, document..) */
+  .syntax--variable.syntax--dom.syntax--js:not(.syntax--property) {
+    color: #9d5711;
+    font-weight: bold;
+  }
+
+  color: black;
+
+}

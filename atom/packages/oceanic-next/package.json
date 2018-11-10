@@ -1,0 +1,41 @@
+{
+  "_from": "https://www.atom.io/api/packages/oceanic-next/versions/1.0.0/tarball",
+  "_id": "oceanic-next@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-U4ffi8AwwS5GwxGGwrBTj1HYF5JMgd4Vhug/s3XfraEBLLnBnjO5vuKDjWjlCfj+I8z/3KnOvd4u7zAuedqjmQ==",
+  "_location": "/oceanic-next",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/oceanic-next/versions/1.0.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/oceanic-next/versions/1.0.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/oceanic-next/versions/1.0.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/oceanic-next/versions/1.0.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/oceanic-next/versions/1.0.0/tarball",
+  "_shasum": "80fefeceab96a420aa26b605f22f0a89597f783c",
+  "_spec": "https://www.atom.io/api/packages/oceanic-next/versions/1.0.0/tarball",
+  "_where": "/private/var/folders/kw/ll9nt0715wd_ndznntj90r580000gn/T/apm-install-dir-118101-16525-bqrt5n.573v",
+  "bugs": {
+    "url": "https://github.com/smlombardi/oceanic-next-syntax/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Based on the Sublime Text theme",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/smlombardi/oceanic-next-syntax#readme",
+  "license": "MIT",
+  "name": "oceanic-next",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smlombardi/oceanic-next-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "1.0.0"
+}

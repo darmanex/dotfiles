@@ -1,0 +1,124 @@
+@import "colors";
+
+.syntax--html {
+
+  // Doctype
+  .syntax--sgml .syntax--tag.syntax--sgml,
+  .syntax--sgml .syntax--punctuation.syntax--definition.syntax--tag{
+    color:black;
+  }
+
+  .syntax--string {
+    color: @string;
+  }
+
+
+  // inline elements - <span>
+  .syntax--meta {
+
+
+  }
+
+  .syntax--punctuation.syntax--definition.syntax--tag {
+    color: @tag;
+  }
+
+  .syntax--entity {
+
+    &.syntax--name.syntax--tag {
+      text-decoration: none;
+
+      // structural elements - <html>
+      &.syntax--structure {
+        color: @tag;
+      }
+
+      // block level elements - <div>, <h1>
+      &.syntax--block {
+        color: @tag;
+      }
+
+      // inline elements - <span>
+      &.syntax--script {
+        // color: @tag;
+      }
+
+    }
+
+    &.syntax--other {
+      &.syntax--attribute-name {
+        color: @element-attr;
+      }
+    }
+
+  }
+
+  .syntax--entity.syntax--character.syntax--html {
+      font-weight: normal;
+      font-style: italic;
+
+      .syntax--entity{ color: #000;}
+  }
+
+  .syntax--meta.syntax--tag.syntax--any {
+    color: black;
+  }
+
+  .syntax--entity.syntax--name.syntax--tag {
+    &.syntax--block, &.syntax--inline, &.syntax--name {
+      color: @tag;
+    }
+  }
+
+  .syntax--entity.syntax--other.syntax--attribute-name.syntax--id.syntax--html {
+    font-weight: normal;
+  }
+
+  .syntax--punctuation.syntax--separator.syntax--key-value {
+    color: @green;
+  }
+
+  .syntax--string.syntax--quoted.syntax--double {
+    color: @string;
+
+    .syntax--punctuation.syntax--definition.syntax--string.syntax--html {
+      &.syntax--begin, &.syntax--end {
+        color: @purple;
+      }
+
+      .syntax--separator.syntax--key-value.syntax--html {
+        color: @green;
+      }
+
+    }
+  }
+
+  .syntax--string.syntax--quoted.syntax--double.syntax--html {
+    color: @purple;
+    font-weight: bold;
+  }
+
+  // php in html attribute
+  .syntax--tag.syntax--html > .syntax--string.syntax--quoted.syntax--html > .syntax--embedded > .syntax--source{
+      font-weight: normal;
+      color: black;
+  }
+
+  .syntax--tag.syntax--html > .syntax--string.syntax--quoted.syntax--html > .syntax--embedded > .syntax--embedded{
+      font-weight: normal;
+      color: @red
+  }
+
+  .syntax--tag.syntax--html > .syntax--string.syntax--quoted.syntax--html {
+    .syntax--constant {
+      color: black;
+      font-weight: normal;
+    }
+    .syntax--constant.syntax--numeric {
+      color: @orange;
+    }
+    .syntax--entity.syntax--name.syntax--function {
+      color: black;
+    }
+  }
+}

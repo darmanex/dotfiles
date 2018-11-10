@@ -1,0 +1,28 @@
+@import "colors";
+
+.syntax--text.syntax--xml{
+  .syntax--punctuation.syntax--definition,
+  .syntax--string{
+    color: @purple;
+  }
+  .syntax--string.syntax--quoted{
+    font-weight: bold;
+  }
+  // XML declaration
+  .syntax--preprocessor{
+    > .syntax--punctuation{
+      background: yellow;
+      color: red;
+      font-weight: bold;
+    }
+  }
+  // Doctype
+  .syntax--doctype{
+    color: black;
+    font-weight: normal;
+    .syntax--punctuation.syntax--definition{
+      color: black;
+      background:#bbd6f2
+    }
+  }
+}

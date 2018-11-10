@@ -1,0 +1,14 @@
+"*":
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontFamily: "Hack, monospace"
+    fontSize: 12
+  "exception-reporting":
+    userId: "46e4ece8-1cef-41ae-82da-4dad75f3b347"
+  welcome:
+    showOnStartup: false

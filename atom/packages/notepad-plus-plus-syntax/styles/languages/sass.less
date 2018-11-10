@@ -1,0 +1,87 @@
+@import "colors";
+
+.syntax--source.syntax--scss {
+  .syntax--entity.syntax--name.syntax--tag {
+    color: @blue;
+    &.syntax--reference{
+      color: #000;
+    }
+  }
+  .syntax--constant.syntax--other.syntax--color{
+    color: #000;
+    font-weight: bold;
+  }
+
+  .syntax--variable.syntax--scss {
+  font-weight: bold;
+  color: rgb(220, 3, 132);
+  }
+
+  .syntax--variable.syntax--scss.syntax--interpolation {
+    color: black;
+    font-weight: bold;
+  }
+
+  .syntax--variable.syntax--meta {
+  color:#000;
+  }
+
+  .syntax--map {
+  color:@navy;
+  }
+  .syntax--map.syntax--bracket {
+  color:#000;
+  }
+
+  .syntax--variable.syntax--scss .syntax--variable.syntax--scss {
+  color: rgb(220, 3, 132);
+  font-weight: bold;
+  }
+
+  .syntax--support.syntax--constant.syntax--css,
+  .syntax--support.syntax--constant.syntax--scss{
+    color: #000;
+  }
+  .syntax--support.syntax--function {
+  color: black;
+  font-weight: normal
+  }
+
+  .syntax--keyword.syntax--other.syntax--unit,
+  .syntax--constant.syntax--numeric {
+  color: black;
+  font-weight: bold;
+  }
+  .syntax--keyword.syntax--other.syntax--default {
+  color: @red;
+  }
+
+  .syntax--property-name.syntax--scss{
+    color: @purplelight;
+    font-weight: bold;
+  }
+  .syntax--property-value.syntax--scss{
+    color: black;
+    font-weight: bold;
+
+    .syntax--support.syntax--function,
+    .syntax--variable.syntax--parameter.syntax--scss {
+      color:black;
+      font-weight: bold;
+    }
+    .syntax--string.syntax--scss {
+      font-weight:normal;
+    }
+  }
+  .syntax--include.syntax--scss .syntax--property-value.syntax--scss{
+    font-weight: normal;
+  }
+
+  .syntax--separator ~ .syntax--string {
+    font-weight:normal;
+    .syntax--punctuation{
+      font-weight:normal;
+    }
+
+  }
+}

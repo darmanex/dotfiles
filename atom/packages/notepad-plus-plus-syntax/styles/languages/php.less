@@ -1,0 +1,107 @@
+@import "colors";
+
+.syntax--php {
+
+  .syntax--keyword.syntax--operator.syntax--php {
+      color: @purple;
+
+      &.syntax--type{
+        color:@blue;
+        font-weight: bold;
+      }
+  }
+  .syntax--variable.syntax--php {
+    color: @navy;
+  }
+
+  .syntax--support.syntax--function.syntax--network.syntax--php,
+  .syntax--support.syntax--function.syntax--var.syntax--php,
+  .syntax--support.syntax--function.syntax--array.syntax--php {
+    color: black;
+    font-weight: normal;
+  }
+
+  // Change punctuation color ([; etc
+  .syntax--source.syntax--php{
+     color: @purple;
+
+    .syntax--function-call{
+      color: black;
+    }
+  }
+
+  /* Rule to prevent PHP ending tag questionmark to be purple aswell */
+  .syntax--punctuation.syntax--section.syntax--embedded.syntax--end.syntax--php .syntax--source.syntax--php {
+      color: red;
+  }
+
+  .syntax--string.syntax--quoted.syntax--double {
+
+    .syntax--punctuation.syntax--definition.syntax--string.syntax--php {
+      &.syntax--begin, &.syntax--end {
+        color: @grey;
+      }
+    }
+  }
+
+  .syntax--source.syntax--php.syntax--sql,
+  .syntax--source.syntax--php.syntax--sql .syntax--constant,
+  .syntax--source.syntax--php.syntax--sql .syntax--support.syntax--function,
+  .syntax--source.syntax--php.syntax--sql .syntax--storage,
+  .syntax--sql.syntax--php .syntax--keyword{
+    color: @grey;
+    font-weight: normal;
+  }
+
+  /* Correct ending PHP tag in inline JS string */
+  .syntax--source .syntax--string .syntax--punctuation.syntax--section.syntax--embedded.syntax--end .syntax--source {
+    color: red;
+  }
+
+  /* PHPDoc */
+  .syntax--comment.syntax--documentation.syntax--phpdoc.syntax--php{
+    .syntax--php{
+      color: @comment
+    }
+    .syntax--tag{
+      background: rgba(78, 136, 78, 0.07);
+    }
+    > .syntax--php ~ .syntax--php{
+      font-weight: normal;
+      text-decoration: none;
+    }
+  }
+}
+
+.syntax--source .syntax--string {
+
+  .syntax--punctuation.syntax--section.syntax--embedded.syntax--php {
+    color: @red;
+    font-weight: normal;
+  }
+}
+
+.syntax--punctuation.syntax--php{
+  color:@purple;
+}
+
+.syntax--namespace.syntax--php{
+  .syntax--punctuation.syntax--php{
+    color:black;
+  }
+}
+
+/* PHP in HTML attribut */
+.syntax--html .syntax--string.syntax--quoted.syntax--double.syntax--html .syntax--embedded.syntax--php{
+  font-weight: normal;
+  .syntax--entity {
+    color: black;
+  }
+}
+
+/* Make PHP functions inside of functions also bold blue */
+
+.syntax--support.syntax--function.syntax--string.syntax--php{
+    color: blue;
+    font-weight: bold;
+}

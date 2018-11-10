@@ -1,0 +1,149 @@
+@import "colors";
+
+.syntax--tag .syntax--css{
+  color: black;
+}
+
+.syntax--tag .syntax--comment.syntax--css{
+  color: @comment;
+}
+
+.syntax--property-value.syntax--css{
+
+  .syntax--constant.syntax--numeric.syntax--css,
+  .syntax--constant.syntax--numeric.syntax--css .syntax--unit.syntax--css,
+  .syntax--function.syntax--css,
+  .syntax--constant.syntax--css{
+    color: black;
+    font-weight: bold;
+  }
+
+  .syntax--constant.syntax--escape.syntax--css{
+    font-weight: normal;
+  }
+
+  .syntax--string.syntax--css{
+    font-weight: normal;
+    color: @string
+  }
+
+}
+
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id.syntax--css {
+    color: @id;
+}
+
+.syntax--css {
+  .syntax--keyword.syntax--important{
+    color: @red;
+    font-weight: bold;
+  }
+}
+
+.syntax--keyword.syntax--css {
+    &.syntax--media{
+      color: black;
+      font-weight: normal;
+    }
+}
+.syntax--css .syntax--media.syntax--keyword.syntax--control,
+.syntax--css .syntax--media.syntax--constant,
+.syntax--css .syntax--media-property.syntax--css.syntax--support.syntax--constant,
+.syntax--css .syntax--media.syntax--css.syntax--at-rule.syntax--keyword.syntax--control{
+  color: black;
+  font-weight: normal;
+  .syntax--keyword {
+    color: black;
+  }
+}
+.syntax--media.syntax--css.syntax--header{
+   .syntax--constant.syntax--numeric{
+    color: black;
+    font-weight: bold;
+  }
+  .syntax--keyword.syntax--other.syntax--unit {
+    color: black;
+  }
+  .syntax--support.syntax--constant {
+    color: black;
+  }
+}
+.syntax--keyword.syntax--control.syntax--font-face.syntax--css {
+    color: @id;
+    font-weight: normal;
+}
+
+.syntax--css {
+  .syntax--import {
+    .syntax--keyword.syntax--control.syntax--at-rule.syntax--import,
+    .syntax--keyword.syntax--control {
+        color: #0080ff;
+        font-weight: normal;
+    }
+    .syntax--support.syntax--constant.syntax--css {
+      color: black;
+    }
+    .syntax--support.syntax--function.syntax--css {
+      color: black;
+      font-weight: normal;
+    }
+  }
+}
+
+.syntax--source .syntax--entity.syntax--name.syntax--tag.syntax--custom.syntax--css{
+  color:@id;
+}
+.syntax--source .syntax--entity.syntax--name.syntax--tag.syntax--custom.syntax--css + .syntax--entity.syntax--name.syntax--tag.syntax--css{
+  color:@blue;
+}
+
+.syntax--source .syntax--entity.syntax--other.syntax--attribute-name.syntax--css{
+  &.syntax--pseudo-class,
+  &.syntax--pseudo-element{
+    color:@orange;
+    font-weight: bold;
+  }
+}
+
+.syntax--tag .syntax--bracket.syntax--css{
+  color: black;
+}
+
+.syntax--keyword.syntax--control.syntax--keyframes,
+.syntax--variable.syntax--keyframe-list{
+    color: #0070ff;
+    font-weight: normal;
+}
+
+.syntax--selector.syntax--css{
+  .syntax--constant.syntax--numeric {
+    color: @blue;
+  }
+}
+
+/* Black color attributes in selectors (default behavior in notepad++) */
+/*
+.syntax--source .syntax--attribute-selector{
+  .syntax--entity.syntax--other.syntax--attribute-name.syntax--css,
+  .syntax--string.syntax--css{
+    color: black;
+  }
+}*/
+
+/* Color attributes in selectors (custom. same color as html attributes) */
+.syntax--css{
+  .syntax--meta.syntax--attribute-selector{
+    .syntax--attribute-name{
+      color: rgba(255, 0, 0, 0.72);
+    }
+    .syntax--quoted,
+    .syntax--unquoted,
+    .syntax--punctuation.syntax--definition.syntax--string {
+      color: rgba(171, 0, 255, 0.81);
+      font-weight: bold;
+    }
+    .syntax--keyword.syntax--operator {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}

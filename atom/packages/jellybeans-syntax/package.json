@@ -1,0 +1,41 @@
+{
+  "_from": "https://www.atom.io/api/packages/jellybeans-syntax/versions/0.7.0/tarball",
+  "_id": "jellybeans-syntax@0.7.0",
+  "_inBundle": false,
+  "_integrity": "sha512-GoTxI1pfh+F22QmKr1I/UHHrhltbsPInzSlAvCS05fVkUTixLGNzBF50KXsp+pMNT3N/zgx7LWA5n8tyG9n4Bg==",
+  "_location": "/jellybeans-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/jellybeans-syntax/versions/0.7.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/jellybeans-syntax/versions/0.7.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/jellybeans-syntax/versions/0.7.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/jellybeans-syntax/versions/0.7.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/jellybeans-syntax/versions/0.7.0/tarball",
+  "_shasum": "74b336c01f670345adf4762765b0a79ea1fef9f0",
+  "_spec": "https://www.atom.io/api/packages/jellybeans-syntax/versions/0.7.0/tarball",
+  "_where": "/private/var/folders/kw/ll9nt0715wd_ndznntj90r580000gn/T/apm-install-dir-118101-11688-1k4dsdf.m2sul",
+  "bugs": {
+    "url": "https://github.com/trevoke/jellybeans-syntax/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A copy of nanotech's vim jellybeans color theme",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/trevoke/jellybeans-syntax#readme",
+  "license": "MIT",
+  "name": "jellybeans-syntax",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevoke/jellybeans-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.7.0"
+}

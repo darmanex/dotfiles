@@ -1,0 +1,51 @@
+{
+  "_from": "https://www.atom.io/api/packages/notepad-plus-plus-syntax/versions/0.2.7/tarball",
+  "_id": "notepad-plus-plus-syntax@0.2.7",
+  "_inBundle": false,
+  "_integrity": "sha512-UOc/L5BQTRkkW5n3VslPGoKzPMq3ij4m7OxpjnWU/EadLEIEJBzcwOwjIFj3kHQayHvD/DtHMKILtToAfW2mBQ==",
+  "_location": "/notepad-plus-plus-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/notepad-plus-plus-syntax/versions/0.2.7/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/notepad-plus-plus-syntax/versions/0.2.7/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/notepad-plus-plus-syntax/versions/0.2.7/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/notepad-plus-plus-syntax/versions/0.2.7/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/notepad-plus-plus-syntax/versions/0.2.7/tarball",
+  "_shasum": "6186bd79da0168cae79ce2d521587bce9f489ff7",
+  "_spec": "https://www.atom.io/api/packages/notepad-plus-plus-syntax/versions/0.2.7/tarball",
+  "_where": "/private/var/folders/kw/ll9nt0715wd_ndznntj90r580000gn/T/apm-install-dir-118101-11735-19xh7n6.fob8",
+  "bugs": {
+    "url": "https://github.com/classikd/notepad-plus-plus-syntax/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Notepad++'s default theme ported to Atom.",
+  "engines": {
+    "atom": ">1.0"
+  },
+  "homepage": "https://github.com/classikd/notepad-plus-plus-syntax#readme",
+  "keywords": [
+    "syntax",
+    "theme",
+    "notepad",
+    "notepad++",
+    "default",
+    "atom",
+    "light",
+    "white"
+  ],
+  "license": "GNU/GPL",
+  "name": "notepad-plus-plus-syntax",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classikd/notepad-plus-plus-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.2.7"
+}
