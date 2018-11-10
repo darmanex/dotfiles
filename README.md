@@ -1,2 +1,2 @@
 # dotfiles
-The OSX dotfiles
+OSX machine dotfiles
