@@ -290,5 +290,6 @@ export SDKMAN_DIR="/home/darm/.sdkman"
 #if [ "$TMUX" = "" ]; then tmux; fi
 
 ## Dotfiles sync
+## ref: https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
