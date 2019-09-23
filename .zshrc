@@ -293,3 +293,7 @@ export SDKMAN_DIR="/home/darm/.sdkman"
 ## ref: https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+# Export JAVA
+export PATH=$PATH:/opt/src/jdk-current/bin
+export JAVA_HOME=/opt/src/jdk-current
+
