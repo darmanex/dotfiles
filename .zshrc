@@ -136,27 +136,6 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# Dockers
-#alias dc-nginx="docker run -t -i nginx /bin/bash" >> start new container
-alias dc-nginx="sudo docker start eb3e7c672c61 && sudo docker exec -it eb3e7c672c61 /bin/bash"
-#alias dc-kali="docker run -t -i kalilinux/kali-linux-docker /bin/bash"
-alias dc-kali="sudo docker start 500a18e1f79f && sudo docker exec -it 500a18e1f79f /bin/bash"
-alias dc-alpine="sudo docker start 713e2c88122b && sudo docker exec -it 713e2c88122b /bin/sh"
-alias dc-start="sudo systemctl start docker && echo 'Docker is now started. Please wait a minutes...'"
-alias dc-stop="sudo systemctl stop docker && echo 'Dcoker engine successfuly stopped!'"
-alias dc-stats-run="sudo docker ps -a --filter status=running"
-alias dc-stats-exit="sudo docker ps -a --filter 'exited=0'"
-alias dc-stop-cont="sudo docker ps -q | xargs -L1 sudo docker stop && echo 'Docker containers has been killed'"
-alias dc-show-all="sudo docker ps -a"
-
-## source: https://medium.com/rootpath/replacing-bash-with-zsh-on-osx-9d88d9d7eaa5
-# IP addresses
-alias cek-ip-publik="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'eth0' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i eth0 -n -s 0 -w — | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 #For compilers to find mysql@5.6 you may need to set:
 export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
@@ -169,20 +148,11 @@ alias mc2api-stop="vboxmanage controlvm 'MC2-RESTAPI-ONLINE' savestate"
 ## MySQL
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
-alias test-dl="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
-
 # git
 alias  gitlog-stat="git log -1 --stat"
 alias gitlog-since="git log --since '2016-10-15' --format='%aE' | sort -u"
 alias gitlog-graph="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all"
 alias gRv='git remote -v'
-
-# cek besaran pemakaian disk
-alias disk-usage="du -sh *"
-
-## Restart network
-alias restart_lan="sudo ifconfig en0 down && sudo ifconfig en0 up"
-alias restart_wifi="sudo ifconfig en1 down && sudo ifconfig en1 up"
 
 alias hm="cd ~"
 alias ll="ls -lha"
@@ -191,9 +161,6 @@ alias sshcfg="cat ~/.ssh/config"
 
 # Flushing DNS cache
 alias flushdns="dscacheutil -flushcache"
-
-# Logging checker
-alias cek-login="egrep -r '(login|attempt|auth|success):' /var/log"
 
 # For metasploit
 export PATH=/opt/metasploit-framework/bin:$PATH
@@ -220,67 +187,6 @@ export PATH=$PATH:$NDK
 export PATH="${PATH}:${HOME}/.bin/scripts/"
 
 
-## Random Quotes start
-# font color : green
-color='\e[0;32m'
-
-# font color : white
-NC='\e[0m' 
-
-getquote(){
-    	num_online_quotes=9999
-    	rand_online=$[ ( $RANDOM % $num_online_quotes ) + 1 ]
-    	quote=$(wget -q -O - "http://www.quotationspage.com/quote/$rand_online.html" |
-    	grep -e "<dt>" -e "</dd>" | awk -F'[<>]' '{ 
-        	if($2 ~ /dt/)
-        	{ print $3 } 
-        	else if($4 ~ /b/)
-        	{ print "-- " $7 "  n(" $19 ")"} 
-     	}')
-}
-i=1
-color='\e[0;32m'
-NC='\e[0m'
-wget -q --spider http://google.com
-if [ $? -eq 0 ]; then
-    while [ $i -lt 5 ]
-    do
-        getquote 
-        echo "$quote" | grep ERROR > /dev/null
-        if [ $? -eq 0 ];then
-            getquote
-            i=`expr $i + 1`
-        else
-            break
-        fi
-    done
-else
-    a=`date|cut -c 19`
-    var=(" Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better.
-    \n \t\t\t\t\t\t\t-Samuel Beckett " "Never give up, for that is just the place and time that the tide will turn.
-    \n \t\t\t\t\t\t\t-Harriet Beecher Stowe " "Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.
-    \n \t\t\t\t\t\t\t-Thomas A. Edison" "Life isn't about getting and having, it's about giving and being.
-    \n \t\t\t\t\t\t\t-Kevin Kruse" "Strive not to be a success, but rather to be of value.
-    \n \t\t\t\t\t\t\t-Albert Einstein" "You miss 100% of the shots you don't take.
-    \n \t\t\t\t\t\t\t-Wayne Gretzky" "People who are unable to motivate themselves must be content with mediocrity, no matter how impressive their other talents.
-    \n \t\t\t\t\t\t\t-Andrew Carnegie" "Design is not just what it looks like and feels like. Design is how it works.
-    \n \t\t\t\t\t\t\t-Steve Jobs" "Only those who dare to fail greatly can ever achieve greatly.
-    \n \t\t\t\t\t\t\t-Robert F. Kennedy" "All our dreams can come true, if we have the courage to pursue them.
-    \n \t\t\t\t\t\t\t-Walt Disney " "Success consists of going from failure to failure without loss of enthusiasm.
-    \n \t\t\t\t\t\t\t-Winston Churchill" )
-    quote="${var[$a]}"
-    # Welcome message ! Edit it with your name 
-    #end of code
-fi 
-echo -e "${color}"
-echo "****************             Welcome back DARMANEX!             *****************"
-echo -e "\n"
-echo -e "Quote of the day for you today is:"
-echo -e "\n"
-echo -e "$quote" | sed 's/n()//g'| xargs -0 echo | fmt -80
-echo -e "${NC}"
-## Random Quotes End
-
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/darm/.sdkman"
@@ -289,8 +195,6 @@ export SDKMAN_DIR="/home/darm/.sdkman"
 ## Start tmux when terminal launched
 #if [ "$TMUX" = "" ]; then tmux; fi
 
-## Dotfiles sync
-## ref: https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Export JAVA
