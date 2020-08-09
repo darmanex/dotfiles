@@ -1,19 +1,27 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin/usr/bin:$PATH
-
-export TERM="xterm-256color"
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/darm/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="simple"
+
+ENABLE_CORRECTION='true'
+
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+#POWERLINE_DETECT_SSH="true"
+#POWERLINE_RIGHT_A="date"
+#POWERLINE_HIDE_HOST_NAME="true"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -25,40 +33,16 @@ export ZSH="/home/darm/.oh-my-zsh"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-ZSH_THEME="powerlevel9k/powerlevel9k"
 # DISABLE_AUTO_UPDATE="true"
 
-POWERLEVEL9K_MODE="nerdfont-complete"
-
-POWERLEVEL9K_DISABLE_RPROMPT=false
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-
-#LINUX_OPENSUSE_ICON=$'\uF314'
-#POWERLEVEL9K_LINUX_ICON=$'\uF314'
-#POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\uE0B1'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status node_version command_execution_time)
-
-POWERLEVEL9K_NODE_VERSION_BACKGROUND='seagreen1'
-POWERLEVEL9K_NODE_VERSION_FOREGROUND='grey30'
-
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='pink1'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='grey30'
-
-POWERLEVEL9K_CUSTOM_ELEMENTARY_ICON="echo   `whoami` "
-POWERLEVEL9K_CUSTOM_ELEMENTARY_ICON_BACKGROUND='lightcoral'
-POWERLEVEL9K_CUSTOM_ELEMENTARY_ICON_FOREGROUND='grey30'
-
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uF408 '
-
-ZSH_DISABLE_COMPFIX=true
-
-
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -89,22 +73,27 @@ ZSH_DISABLE_COMPFIX=true
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  zsh-syntax-highlighting
-  zsh-autosuggestions
-  bundler
-  dotenv
-  osx
-  rake
-  rbenv
-  ruby
-  docker
-)
+	colored-man-pages
+	last-working-dir
+	git
+	history-substring-search
+	sublime
+	vagrant
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	kubectl
+	docker
+    ruby
+	)
+
+export TERM=xterm-256color
+
+export PAGER="most"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,11 +111,8 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+# Compilation flags	
+# export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -137,67 +123,99 @@ export ARCHFLAGS="-arch x86_64"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#For compilers to find mysql@5.6 you may need to set:
-export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include"
+## MySQL
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 ## Stopping VM Guest
 alias mc2db-stop="vboxmanage controlvm 'MC2-DB-ONLINE' savestate"
 alias mc2api-stop="vboxmanage controlvm 'MC2-RESTAPI-ONLINE' savestate"
 
-## MySQL
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
+alias pcin="sudo pacman -S"
+alias pcs="pacman -Ss"
+alias pcu="sudo pacman -Syu"
+alias pcr="sudo pacman -R"
 
 # git
-alias  gitlog-stat="git log -1 --stat"
-alias gitlog-since="git log --since '2016-10-15' --format='%aE' | sort -u"
-alias gitlog-graph="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all"
-alias gRv='git remote -v'
+alias gl-stat="git log -1 --stat"
+alias gl-since="git log --since '2016-10-15' --format='%aE' | sort -u"
+alias gl-graph="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all"
+alias grv="git remote -v"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias gst="git status"
+alias gpush="git push"
+alias gpull="git pull"
+alias gfetch="git fetch"
 
-alias hm="cd ~"
-alias ll="ls -lha"
-alias clr="clear"
-alias sshcfg="cat ~/.ssh/config"
+# history
+alias hg="history | grep"
 
-# Flushing DNS cache
+# ssh
+alias sshcfg="less ~/.ssh/config"
+
+# Flushing DNS
 alias flushdns="dscacheutil -flushcache"
 
-# For metasploit
-export PATH=/opt/metasploit-framework/bin:$PATH
-
-## example: export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/bin:/usr/bin:$PATH
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Make zsh know about hosts already accessed by SSH
+# make zsh know about hosts already accessed by SSH
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
-## Suse key shortcut
-alias zin="sudo zypper install"
-alias zse="zypper search"
-alias zur="sudo zypper update && sudo zypper refresh"
-alias zrepo="sudo zypper addrepo"
+# command aliases
+alias hm="cd ~"
+alias cls="clear"
+alias sshcfg="less ~/.ssh/config"
+
+# Lists: src=vitorbritto
+# -------------------
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colorflag="--color"
+else # OS X `ls`
+    colorflag="-G"
+fi
+
+# List all files colorized in long format
+alias l="ls -l ${colorflag}"
+
+# List all files colorized in long format, including dot files
+alias la="ls -la ${colorflag}"
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# Always use color output for `ls`
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+    alias ls="command ls -G"
+else
+    alias ls="command ls --color"
+    export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
+fi
+
+# `cat` with beautiful colors. requires Pygments installed.
+# sudo easy_install Pygments
+alias c='pygmentize -O style=monokai -f console256 -g'
+
+# check network card
+alias cek-nic="lspci -knn | grep Net -A2"
+
+## Start tmux when terminal launched
+#if [ "$TMUX" = "" ]; then tmux; fi
+
+# Export JAVA
+export PATH=$PATH:/opt/src/jdk-current/bin
+export JAVA_HOME=/opt/src/jdk-current
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/darm/.sdkman"
+[[ -s "/home/darm/.sdkman/bin/sdkman-init.sh" ]] && source "/home/darm/.sdkman/bin/sdkman-init.sh"
 
 ## Android SDK
 export ANDROID_HOME=/home/$USER/Android/Sdk
 export NDK_HOME=$ANDROID_HOME/android-ndk-r15c
 export PATH=$PATH:$NDK
 
-## betterlockscreen PATH
-export PATH="${PATH}:${HOME}/.bin/scripts/"
+# Metasploit
+export PATH=/opt/metasploit-framework/bin:$PATH
 
-
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/darm/.sdkman"
-[[ -s "/home/darm/.sdkman/bin/sdkman-init.sh" ]] && source "/home/darm/.sdkman/bin/sdkman-init.sh"
-
-## Start tmux when terminal launched
-#if [ "$TMUX" = "" ]; then tmux; fi
-
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-# Export JAVA
-export PATH=$PATH:/opt/src/jdk-current/bin
-export JAVA_HOME=/opt/src/jdk-current
-
+# set dotfile to sync on github
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
