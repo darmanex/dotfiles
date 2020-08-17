@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/usr/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="simple"
+ZSH_THEME="gentoo"
 
 ENABLE_CORRECTION='true'
 
@@ -79,6 +79,11 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	colored-man-pages
+	archlinux
+	cp
+	dirhistory
+	sudo
+	command-not-found
 	last-working-dir
 	git
 	history-substring-search
@@ -135,6 +140,10 @@ alias pcin="sudo pacman -S"
 alias pcs="pacman -Ss"
 alias pcu="sudo pacman -Syu"
 alias pcr="sudo pacman -R"
+alias yse="yay -Ss"
+alias yin="yay -S"
+alias yre="yay -Rns"
+alias yup="yay -Syyy"
 
 # git
 alias gl-stat="git log -1 --stat"
@@ -147,11 +156,13 @@ alias gpush="git push"
 alias gpull="git pull"
 alias gfetch="git fetch"
 
+# zsh stuff
+alias ez="vim ~/.zshrc"
+alias sz="source ~/.zshrc"
+alias cz="less ~/.zshrc"
+
 # history
 alias hg="history | grep"
-
-# ssh
-alias sshcfg="less ~/.ssh/config"
 
 # Flushing DNS
 alias flushdns="dscacheutil -flushcache"
@@ -175,7 +186,7 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -l ${colorflag}"
+alias l="ls -lha ${colorflag}"
 
 # List all files colorized in long format, including dot files
 alias la="ls -la ${colorflag}"
@@ -219,3 +230,12 @@ export PATH=/opt/metasploit-framework/bin:$PATH
 
 # set dotfile to sync on github
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dst='dotfiles status'
+
+# connect to wifi
+alias wlist='sudo nmcli device wifi list'
+alias wcon='sudo nmcli device wifi connect'
+
+# Editor stuff
+alias v="vim"
+alias n="nano"
