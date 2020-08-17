@@ -18,10 +18,10 @@ set nocompatible
 "" Vundle settings
 "=====================================================
 filetype off
-set rtp+=$vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-    Plugin 'VundleVim/Vundle.vim'               " let Vundle manage Vundle, required
+    Plugin 'vundleVim/vundle.vim'               " let Vundle manage Vundle, required
 
     "-------------------=== Code/Project navigation ===-------------
     Plugin 'scrooloose/nerdtree'                " Project and file navigation
@@ -48,10 +48,14 @@ call vundle#begin()
     Plugin 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
     Plugin 'Rykka/riv.vim'                      " ReStructuredText plugin
     Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
+    Plugin 'avakhov/vim-yaml'                   " Yaml syntax
 
     "-------------------=== Python  ===-----------------------------
     Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
     Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
+
+    "-------------------=== Colors ===------------------------------
+    Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()                           " required
 filetype on
@@ -86,6 +90,7 @@ endif
 syntax enable                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
+set background=dark
 colorscheme PaperColor                      " set color scheme
 
 set number                                  " show line numbers
@@ -258,14 +263,14 @@ nmap <leader>g :YcmCompleter GoTo<CR>
 nmap <leader>d :YcmCompleter GoToDefinition<CR>
 
 
-set runtimepath+=~/.vim_runtime
+"set runtimepath+=~/.vim_runtime
 
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
+"source ~/.vim_runtime/vimrcs/basic.vim
+"source ~/.vim_runtime/vimrcs/filetypes.vim
+"source ~/.vim_runtime/vimrcs/plugins_config.vim
+"source ~/.vim_runtime/vimrcs/extended.vim
 
 try
-source ~/.vim_runtime/my_configs.vim
+"source ~/.vim_runtime/my_configs.vim
 catch
 endtry
