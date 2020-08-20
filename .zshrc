@@ -167,11 +167,16 @@ alias gl-stat="git log -1 --stat"
 alias gl-since="git log --since '2016-10-15' --format='%aE' | sort -u"
 alias gl-graph="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all"
 alias grv="git remote -v"
-alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias gst="git status"
 alias gpush="git push"
 alias gpull="git pull"
 alias gfetch="git fetch"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias da="dotfiles add"
+alias dcm="dotfiles commit -m"
+alias dp="dotfiles push"
+alias dst='dotfiles status'
+
 
 # zsh stuff
 alias ez="vim ~/.zshrc"
@@ -244,10 +249,6 @@ export PATH=$PATH:$NDK
 
 # Metasploit
 export PATH=/opt/metasploit-framework/bin:$PATH
-
-# set dotfile to sync on github
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dst='dotfiles status'
 
 # connect to wifi
 alias wlist='sudo nmcli device wifi list'
