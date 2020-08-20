@@ -1,5 +1,22 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:/usr/bin:/usr/local/bin:$PATH
+export PATH="/usr/bin:/usr/local/bin:$PATH"
+
+# Allow any custom binaries
+export PATH=$HOME/.local/bin:$PATH
+
+# Default editor
+export EDITOR="vim"
+
+# Go environment
+export GOPATH=$HOME/Development/golang
+export GOROOT=/usr/bin/go
+
+# Python environemt
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
