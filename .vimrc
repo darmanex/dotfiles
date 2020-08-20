@@ -36,6 +36,7 @@ call vundle#begin()
     Plugin 'rosenfeld/conque-term'              " Consoles as buffers
     Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
     Plugin 'flazz/vim-colorschemes'             " Colorschemes
+    Plugin 'alx741/vim-hindent'                  " Indentation
 
     "-------------------=== Snippets support ===--------------------
     Plugin 'garbas/vim-snipmate'                " Snippets manager
@@ -49,6 +50,7 @@ call vundle#begin()
     Plugin 'Rykka/riv.vim'                      " ReStructuredText plugin
     Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
     Plugin 'avakhov/vim-yaml'                   " Yaml syntax
+    Plugin 'frazrepo/vim-rainbow'               " Rainbow for bracket, curly, etc
 
     "-------------------=== Python  ===-----------------------------
     Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
@@ -91,7 +93,7 @@ syntax enable                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
 set background=dark
-colorscheme PaperColor                      " set color scheme
+colorscheme onedark                      " set color scheme
 
 set number                                  " show line numbers
 set ruler
@@ -140,10 +142,15 @@ set hlsearch	                            " highlight search results
 "=====================================================
 "" AirLine settings
 "=====================================================
-let g:airline_theme='badwolf'
+let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
+
+"" lightline settings
+"let g:lightline = {
+"  \ 'colorscheme': 'onedark',
+"  \ }
 
 "=====================================================
 "" TagBar settings
@@ -257,12 +264,27 @@ let g:syntastic_warning_symbol='x'
 let g:syntastic_style_warning_symbol='x'
 let g:syntastic_python_checkers=['flake8', 'pydocstyle', 'python']
 
+" Rainbow for curly braces, etc
+let g:rainbow_active = 1
+
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 nmap <leader>g :YcmCompleter GoTo<CR>
 nmap <leader>d :YcmCompleter GoToDefinition<CR>
 
+" Haskel syntax highlighting and indentation
+let g:haskell_enable_quantification = 1
+
+" Hindent config
+let g:hindent_on_save = 1
+" indentation default 2
+let g:hindent_indent_size = 2
+
+" NerdTree stuff
+" How can I open a NERDTree automatically when vim starts up if no files were specified?
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "set runtimepath+=~/.vim_runtime
 
