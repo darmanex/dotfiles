@@ -9,7 +9,9 @@ export EDITOR="vim"
 
 # Go environment
 export GOPATH=$HOME/Development/golang
-export GOROOT=/usr/bin/go
+#export GOBIN=$GOPATH/bin
+#export GOROOT=/usr/local/bin/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # Python environemt
 export PYENV_ROOT="$HOME/.pyenv"
@@ -161,6 +163,7 @@ alias yse="yay -Ss"
 alias yin="yay -S"
 alias yre="yay -Rns"
 alias yup="yay -Syyy"
+alias yugrade=" yay -Syu"
 
 # git
 alias gl-stat="git log -1 --stat"
@@ -257,3 +260,7 @@ alias wcon='sudo nmcli device wifi connect'
 # Editor stuff
 alias v="vim"
 alias n="nano"
+
+alias test-speaker="speaker-test -t wav -c 6"
+
+alias cek-soundcard="lspci -v | grep -i -A7 audio"
