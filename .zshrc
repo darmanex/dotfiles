@@ -255,7 +255,7 @@ export PATH=/opt/metasploit-framework/bin:$PATH
 
 # connect to wifi
 alias wlist='sudo nmcli device wifi list'
-alias wcon='sudo nmcli device wifi connect'
+alias wcon='sudo nmcli -ask d wifi connect'
 
 # Editor stuff
 alias v="vim"
@@ -264,3 +264,14 @@ alias n="nano"
 alias test-speaker="speaker-test -t wav -c 6"
 
 alias cek-soundcard="lspci -v | grep -i -A7 audio"
+
+# check if wifi driver loaded
+alias cek-wifi-driver="lspci -k | grep wifi"
+
+# Kill firefox
+alias kill-ff="kill -9 `ps ax|grep 'firefox' | awk '{print $1}'`"
+
+# hidden the hostname
+prompt_context () { }
+
+
