@@ -1,3 +1,8 @@
 sh ~/.local/bin/touchpad
 
 light-locker-command -l &
+
+xrandr --dpi 125.37
+
+# sounds
+xbindkeys
