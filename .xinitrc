@@ -8,6 +8,8 @@ fi
 # start compositor
 picom -b
 
+exec xbindkeys
+
 exec xmonad
 
 sh ~/.local/bin/screensaver.sh
