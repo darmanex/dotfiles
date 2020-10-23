@@ -89,7 +89,7 @@ endif
 """"""""""" END of PowerLine Settings  """""""""""""""
 
 
-syntax enable                               " syntax highlight
+syntax on                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
 set background=dark
@@ -283,8 +283,8 @@ let g:hindent_indent_size = 2
 
 " NerdTree stuff
 " How can I open a NERDTree automatically when vim starts up if no files were specified?
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "set runtimepath+=~/.vim_runtime
 
@@ -293,7 +293,7 @@ let g:hindent_indent_size = 2
 "source ~/.vim_runtime/vimrcs/plugins_config.vim
 "source ~/.vim_runtime/vimrcs/extended.vim
 
-try
+"try
 "source ~/.vim_runtime/my_configs.vim
-catch
-endtry
+"catch
+"endtry
