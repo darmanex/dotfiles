@@ -18,6 +18,11 @@ import XMonad.Util.Run
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
+-- audio
+import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.EZConfig(additionalKeys)
+import System.IO
 
 myFont :: String
 myFont = "xft:Mononoki Nerd Font:bold:size=9:antialias=true:hinting=true"
@@ -27,6 +32,9 @@ myFont = "xft:Mononoki Nerd Font:bold:size=9:antialias=true:hinting=true"
 --
 myTerminal = "alacritty"
 
+-- audio
+-- xF86XK_AudioMicMute :: KeySym
+-- xF86XK_AudioMicMute = 269025202
 
 myScreenSaver = "/usr/bin/xscreensaver-command --lock"
 
@@ -282,7 +290,17 @@ myStartupHook = do
 --
 main = do
   xmproc <- spawnPipe "xmobar -x 0 ~/.config/xmobar/xmobarrc"
-  xmonad $ docks defaults
+  xmonad $ docks defaults `additionalKeys`
+    -- [ ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 5%-")
+    -- , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 5%+")
+    -- , ((0, xF86XK_AudioMicMute), spawn "amixer set Master toggle")
+    -- , ((0, xF86XK_AudioMicMute), spawn "amixer set Capture toggle")
+    -- ]
+    [
+     ((0                     , 0x1008FF11), spawn "amixer -q sset Master 2%-"),
+     ((0                     , 0x1008FF13), spawn "amixer -q sset Master 2%+"),
+     ((0                     , 0x1008FF12), spawn "amixer set Master toggle")
+    ]
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
