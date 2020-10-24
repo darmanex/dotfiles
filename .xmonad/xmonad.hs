@@ -36,8 +36,14 @@ myTerminal = "alacritty"
 -- xF86XK_AudioMicMute :: KeySym
 -- xF86XK_AudioMicMute = 269025202
 
+-- screensaver
 myScreenSaver = "/usr/bin/xscreensaver-command --lock"
 
+-- screenshot full
+myScreenShotFull = "~/.local/bin/screenshot-full"
+
+-- screenshot select
+myScreenShotSelect = "~/.local/bin/screenshot-select"
 
 -- launcher
 myLauncher = "rofi -combi-modi window,drun,ssh -theme onedark -font 'Source Code Pro Medium 10' -show drun -icon-theme 'Papirus' -show-icons"
@@ -85,6 +91,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
+
+    -- screenshot your fuckin desktop area
+    , ((modm .|. controlMask, xK_Print), spawn myScreenShotSelect)
+    , ((modm , xK_Print), spawn myScreenShotFull) 
 
     -- lock your fuckin screen
     , ((modm .|. shiftMask, xK_x), spawn myScreenSaver)
