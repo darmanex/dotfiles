@@ -1,4 +1,4 @@
---
+-
 -- xmonad example config file.
 --
 -- A template showing all available configuration hooks,
@@ -292,6 +292,10 @@ myLogHook = return ()
 myStartupHook = do
    spawnOnce "nitrogen --restore &"
    spawnOnce "picom &"
+   spawnOnce "nm-applet &"
+   spawnOnce "volumeicon &"
+   spawnOnce "xdotool windowraise `xdotool search --all --name xmobar`"
+
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -299,7 +303,7 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-  xmproc <- spawnPipe "xmobar -x 0 ~/.config/xmobar/xmobarrc"
+  xmproc <- spawnPipe "xmobar -x 0 /home/darm/.config/xmobar/xmobarrc"
   xmonad $ docks defaults `additionalKeys`
     -- [ ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 5%-")
     -- , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 5%+")

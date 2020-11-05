@@ -20,3 +20,6 @@ sh ~/.local/bin/touchpad
 
 # stalonetray
 stalonetray -c ~/.config/stalonetray/stalonetrayrc-single &
+
+# notification daemon
+dunst &
