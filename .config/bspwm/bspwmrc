@@ -16,7 +16,7 @@ killall picom
 picom -G &
 
 # auto lock when screen has inactivity
-xautolock -time 10 -locker "~/.local/bin/lock.sh"
+xautolock -notify 30 -notifier "notify-send -u critical -t 10000 'The screen will be LOCKING in 30s'" -time 10 -locker "~/.local/bin/lock.sh"
 
 bspc monitor LVDS-1 -d 1 2 3 4 5
 bspc monitor HDMI-2 -d 6 7 8 9 0
