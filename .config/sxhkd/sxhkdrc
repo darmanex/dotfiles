@@ -8,13 +8,13 @@ super + Return
 
 # program launcher
 super + @space
-    rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
-    #rofi -show drun -theme android_notification
-    #rofi -combi-modi window,drun,ssh -theme android_notification font "hack 8" -show combi -icon-theme "Papirus" -show-icons
+    ~/.config/polybar/scripts/launcher
+    #~/Packages/polybar-themes/polybar-4/scripts/launcher
+    #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
+	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Config has been reloaded!'
 
 #
 # bspwm hotkeys
@@ -125,12 +125,13 @@ super + {Left,Down,Up,Right}
 # my own keys
 #
 # lock
-ctrl + alt + l
+super + @l
     ~/.local/bin/lock.sh
 
 # screenshot
-ctrl + @Print
-	maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%s).png
+ctrl + @p
+    ~/.local/bin/screenshot.sh
+	#maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%s).png
 
 # Open Firefox
 ctrl + shift + f
@@ -141,3 +142,9 @@ super + p
 
 ctrl + shift + w
     ~/Packages/rofi-wifi-menu/rofi-wifi-menu.sh
+
+ctrl + alt + c
+    zenity --calendar
+
+ctrl + alt + b
+    ~/.local/bin/battery_status.sh
