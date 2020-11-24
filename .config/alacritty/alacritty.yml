@@ -4,30 +4,52 @@ env:
 # Font configuration (changes require restart)
 font:
   # The size to use.
-  size: 7
+  size: 6
   # The normal (roman) font face to use.
   normal:
-    family: SauceCodePro Nerd Font Mono
+    #family: SauceCodePro Nerd Font Mono
+    #family: Dejavu Sans Mono
+    #family: Iosevka Nerd Font Mono
+    family: Hack
     # Style can be specified to pick a specific face.
     style: Semibold
 
   # The bold font face
   bold:
-    family: SauceCodePro Nerd Font Mono
+    #family: SauceCodePro Nerd Font Mono
+    #family: Dejavu Sans Mono
+    #family: Iosevka Nerd Font Mono
+    family: Hack
     # Style can be specified to pick a specific face.
     style: SemiBold
 
   # The italic font face
   italic:
-    family: SauceCodePro Nerd Font Mono
+    #family: SauceCodePro Nerd Font Mono
+    #family: Dejavu Sans Mono
+    #family: Iosevka Nerd Font Mono
+    family: Hack
     # Style can be specified to pick a specific face.
     style: Italic
   bold_italic:
-    family: SauceCodePro Nerd Font Mono
+    #family: SauceCodePro Nerd Font Mono
+    #family: Dejavu Sans Mono
+    #family: Iosevka Nerd Font Mono
+    family: Hack
 
   offset:
     x: 1
     y: 1
+
+window:
+  dimensions:
+    columns: 80
+    lines: 24
+  padding:
+    x: 2
+    y: 6
+  dynamic_title: true
+
 
 # Colors (iTerm 2)
 colors:
@@ -90,7 +112,7 @@ colors:
 
 draw_bold_text_with_bright_colors: true
 
-background_opacity: 0.90
+background_opacity: 100
 
 scrolling:
   history: 20000
