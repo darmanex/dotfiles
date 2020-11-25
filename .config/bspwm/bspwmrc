@@ -12,6 +12,9 @@ $HOME/.local/bin/battery_low.sh &
 killall dunst
 dunst &
 
+# MPD daemon start (if no other user instance exists)
+[ ! -s ~/.config/mpd/pid ] && mpd
+
 # compositor
 killall picom
 picom -G &
