@@ -1,0 +1,26 @@
+~/Documents/awesome-tutorials  git:(master) ❯❯❯ yin gmpc
+:: Checking for conflicts...
+:: Checking for inner conflicts...
+[Repo:1]  libmpd-11.8.17-5
+[Repo Make:33]  gob2-2.0.20-3  perl-encode-locale-1.05-7  perl-http-date-6.05-3  perl-file-listing-6.11-1  perl-html-tagset-3.20-10  perl-clone-0.45-2  perl-io-html-1.004-1  perl-lwp-mediatypes-6.02-8  perl-http-message-6.26-1  perl-html-parser-3.75-1  perl-http-cookies-6.09-1  perl-http-daemon-6.06-2  perl-http-negotiate-6.01-8  perl-net-http-6.19-4  perl-try-tiny-0.30-5  perl-www-robotrules-6.02-8  perl-libwww-6.49-1  perl-xml-parser-2.46-2  intltool-0.51.0-6  glib2-docs-2.66.2-1  python-lxml-4.6.1-1  python-anytree-2.8.0-1  gtk-doc-1.33.1-1  gd-2.3.0-1  jbig2dec-0.19-1  libpaper-1.1.28-1  ijs-0.35-3  ghostscript-9.53.3-2  netpbm-10.73.33-1  gts-0.7.6.121130-2  gsfonts-20200910-1  graphviz-2.44.1-4  vala-0.50.2-1
+[Aur:1]  gmpc-11.8.16-6
+
+:: (1/1) Parsing SRCINFO: gmpc
+[sudo] password for darm:
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (34) gd-2.3.0-1  ghostscript-9.53.3-2  glib2-docs-2.66.2-1  gob2-2.0.20-3
+              graphviz-2.44.1-4  gsfonts-20200910-1  gtk-doc-1.33.1-1  gts-0.7.6.121130-2
+              ijs-0.35-3  intltool-0.51.0-6  jbig2dec-0.19-1  libmpd-11.8.17-5
+              libpaper-1.1.28-1  netpbm-10.73.33-1  perl-clone-0.45-2
+              perl-encode-locale-1.05-7  perl-file-listing-6.11-1  perl-html-parser-3.75-1
+              perl-html-tagset-3.20-10  perl-http-cookies-6.09-1  perl-http-daemon-6.06-2
+              perl-http-date-6.05-3  perl-http-message-6.26-1  perl-http-negotiate-6.01-8
+              perl-io-html-1.004-1  perl-libwww-6.49-1  perl-lwp-mediatypes-6.02-8
+              perl-net-http-6.19-4  perl-try-tiny-0.30-5  perl-www-robotrules-6.02-8
+              perl-xml-parser-2.46-2  python-anytree-2.8.0-1  python-lxml-4.6.1-1
+              vala-0.50.2-1
+
+Total Download Size:    34.96 MiB
+Total Installed Size:  120.69 MiB
