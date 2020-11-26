@@ -2,10 +2,14 @@
 export PATH="/usr/bin:/usr/local/bin:$PATH"
 
 # Allow any custom binaries
-export PATH=$HOME/.local/bin:$PATH
+#export PATH=$HOME/.local/bin:$PATH
+export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Default editor
 export EDITOR="vim"
+
+# Rust environment
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Go environment
 export GOPATH=$HOME/Development/golang
@@ -27,7 +31,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="gentoo"
+ZSH_THEME="simple-darm"
 
 ENABLE_CORRECTION='true'
 
@@ -165,6 +169,17 @@ alias yre="yay -Rns"
 alias yup="yay -Syyy"
 alias yugrade=" yay -Syu"
 
+#Generating a List of Only the Installed Package Names
+alias ylist="pacman -Qr | awk '{print $1}'"
+
+# Clean up all local caches. Options might limit what is actually cleaned
+alias yclean="yay -Sc" # or yay -Scc
+
+# Remove dependencies that are no longer needed, because e.g. the package which needed the dependencies was removed.
+alias yautoremove="yay -Qdtq | yay -Rs -" # or to remove recursively => pacman -Rcs $(pacman -Qdtq) 
+
+# Print system statistics
+alias yps="yay -Ps"
 # git
 alias gl-stat="git log -1 --stat"
 alias gl-since="git log --since '2016-10-15' --format='%aE' | sort -u"
@@ -184,7 +199,7 @@ alias dst='dotfiles status'
 # zsh stuff
 alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
-alias cz="less ~/.zshrc"
+alias lz="less ~/.zshrc"
 
 # history
 alias hg="history | grep"
@@ -195,11 +210,15 @@ alias flushdns="dscacheutil -flushcache"
 # make zsh know about hosts already accessed by SSH
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
-# command aliases
+# back to home
 alias hm="cd ~"
-alias cls="clear"
-alias sshcfg="less ~/.ssh/config"
 
+# clear the screen
+alias cls="clear"
+
+# showing ssh config
+alias sshcfg="less ~/.ssh/config"
+alias con="ssh"
 # Lists: src=vitorbritto
 # -------------------
 
@@ -212,9 +231,6 @@ fi
 
 # List all files colorized in long format
 alias l="ls -lha ${colorflag}"
-
-# List all files colorized in long format, including dot files
-alias la="ls -la ${colorflag}"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
@@ -269,9 +285,54 @@ alias cek-soundcard="lspci -v | grep -i -A7 audio"
 alias cek-wifi-driver="lspci -k | grep wifi"
 
 # Kill firefox
-alias kill-ff="kill -9 `ps ax|grep 'firefox' | awk '{print $1}'`"
+alias kill-ff="kill -9 `ps ax|grep 'firefox-developer-edition' | awk '{print $1}'`"
 
 # hidden the hostname
 prompt_context () { }
 
+neofetch
 
+function targz() {
+  tar -czvf "$1.tar.gz" "$1"
+}
+
+function untargz() {
+  tar -xzvf $1
+}
+
+function _calcram() {
+  local sum
+  sum=0
+  for i in `ps aux | grep -i "$1" | grep -v "grep" | awk '{print $6}'`; do
+    sum=$(($i + $sum))
+  done
+  sum=$(echo "scale=2; $sum / 1024.0" | bc)
+  echo $sum
+}
+
+#https://github.com/paulmillr/dotfiles/blob/master/home/.zshrc.sh#L229
+# Show how much RAM application uses.
+# $ ram safari
+# # => safari uses 154.69 MBs of RAM
+function ram() {
+  local sum
+  local app="$1"
+  if [ -z "$app" ]; then
+    echo "First argument - pattern to grep from processes"
+    return 0
+  fi
+
+  sum=$(_calcram $app)
+  if [[ $sum != "0" ]]; then
+    echo "${fg[blue]}${app}${reset_color} uses ${fg[green]}${sum}${reset_color} MBs of RAM"
+  else
+    echo "No active processes matching pattern '${fg[blue]}${app}${reset_color}'"
+  fi
+}
+
+function finder() {
+  find . -iname "*${1:-}*"
+}
+
+# showing groups,user,args
+alias psgroup="ps -eo user,group,supgrp,args | grep"
