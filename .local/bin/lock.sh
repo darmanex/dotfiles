@@ -1,13 +1,7 @@
-#!/usr/bin/env bash
-
-#exec xautolock -detectsleep
-#   -time 3 \
-#   -notify 30 \
-#   -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'"
+#!/bin/bash
 
 # set the icon and a temporary location for the screenshot to be stored
-#icon="$HOME/Themes/Icons/lock/lock-50.png"
-icon="$HOME/Pictures/Icons/lock-icon-red.png"
+icon="$HOME/.local/share/icons/misc/lock-icon-red.png"
 tmpbg='/tmp/screen.png'
 
 (( $# )) && { icon=$1; }
