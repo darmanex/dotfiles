@@ -1,0 +1,6 @@
+[Default Applications]
+# https://bbs.archlinux.org/viewtopic.php?id=140028
+# https://wiki.archlinux.org/index.php/Xdg-utils#Set_the_default_browser
+
+x-scheme-handler/http=firefox-developer-edition.desktop
+x-scheme-handler/https=firefox-developer-edition.desktop
