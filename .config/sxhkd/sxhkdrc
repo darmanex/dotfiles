@@ -8,9 +8,9 @@ super + Return
 
 # program launcher
 super + @space
-    ~/.config/polybar/scripts/launcher
-    #~/Packages/polybar-themes/polybar-4/scripts/launcher
-    #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
+     ~/.config/polybar/scripts/launcher
+     #~/Packages/polybar-themes/polybar-12/scripts/launcher
+           #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -131,9 +131,17 @@ super + @l
     ~/.local/bin/lock.sh
 
 # screenshot
-ctrl + @p
-    ~/.local/bin/screenshot.sh
+# select screenshot
+ctrl + shift + @p
+    ~/.local/bin/ss-select.sh
+    #~/.local/bin/screenshot.sh
 	#maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%s).png
+# full screenshot
+control + Print
+    ~/.local/bin/ss-full.sh
+
+control + super + Print
+    ~/.local/bin/ss-window.sh
 
 # Open Firefox
 ctrl + shift + f
