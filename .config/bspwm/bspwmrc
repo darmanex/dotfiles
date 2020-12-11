@@ -11,6 +11,9 @@ $HOME/.local/bin/battery_low.sh &
 # notification daemon
 pgrep -x dunst >> /dev/null || dunst &
 
+# launch screensaver
+pgrep -x xscreensaver >> /dev/null || xscreensaver &
+
 # MPD daemon start (if no other user instance exists)
 [ ! -s ~/.config/mpd/pid ] && mpd
 sh ~/.local/bin/start-mpd.sh
