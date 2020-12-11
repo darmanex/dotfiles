@@ -5,6 +5,9 @@ export PATH="/usr/bin:/usr/local/bin:$PATH"
 #export PATH=$HOME/.local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 
+# Ruby gems
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+
 # Default editor
 export EDITOR="vim"
 
@@ -91,6 +94,9 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -287,6 +293,9 @@ alias cek-wifi-driver="lspci -k | grep wifi"
 # Kill firefox
 alias kill-ff="kill -9 `ps ax|grep 'firefox-developer-edition' | awk '{print $1}'`"
 
+# kill msteams
+alias kill-teams="kill -9 `ps ax|grep '/usr/share/teams/teams' | awk '{print $1}'`"
+
 # hidden the hostname
 prompt_context () { }
 
@@ -336,3 +345,28 @@ function finder() {
 
 # showing groups,user,args
 alias psgroup="ps -eo user,group,supgrp,args | grep"
+
+# generating a random password
+alias pass-gen="openssl rand -base64 24 | colrm 32"
+
+alias sctl="systemctl"
+
+# start mpd daemon
+alias run-mpd="sudo mpd ~/.config/mpd/mpd.conf"
+
+# bring the wifi interface up
+alias wifi-up="sudo ip link set wlp3s0 up"
+
+# check last updated
+alias clu="awk 'END{sub(/\[/,""); print $1}' /var/log/pacman.log"
+alias clup="egrep 'pacman -Syu' /var/log/pacman.log | tail -1"
+
+# Firefox stuff
+#alias kill-ff="ps auxww | grep -i 'Firefox Developer Edition' | grep -v grep | awk '{ print $2 }' | xargs kill -9"
+alias kill-ff="kill -9 `ps ax|grep 'firefox-developer-edition' | awk '{print $1}'`"
+
+# Get top proses eating cpu
+alias ps-cpu-usage="ps aux | sort -nr -k 3 | head -10"
+
+# Get top proses eating memory
+alias ps-mem-usage="ps aux | sort -nr -k 4 | head -10"
