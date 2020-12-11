@@ -370,3 +370,6 @@ alias ps-cpu-usage="ps aux | sort -nr -k 3 | head -10"
 
 # Get top proses eating memory
 alias ps-mem-usage="ps aux | sort -nr -k 4 | head -10"
+
+# Start tmux when terminal launched
+if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
