@@ -385,5 +385,5 @@ alias check-mon='xrandr -q | grep " connected" | cut -d ' ' -f1'
 
 # show response header of website
 function showheader() {
-    clear && wget -q -S -O - $1 > /dev/null
+    clear && curl -k -L -I $1
 }
