@@ -18,7 +18,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=$HOME/Development/golang
 #export GOBIN=$GOPATH/bin
 #export GOROOT=/usr/local/bin/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+#export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=$GOPATH/bin:$PATH
 
 # Python environemt
 export PYENV_ROOT="$HOME/.pyenv"
@@ -347,7 +348,7 @@ function finder() {
 alias psgroup="ps -eo user,group,supgrp,args | grep"
 
 # generating a random password
-alias pass-gen="openssl rand -base64 24 | colrm 32"
+alias pass-gen="openssl rand -base64 12 | colrm 32"
 
 alias sctl="systemctl"
 
@@ -373,3 +374,16 @@ alias ps-mem-usage="ps aux | sort -nr -k 4 | head -10"
 
 # Start tmux when terminal launched
 if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
+
+# testing download speed
+alias test-dl="/usr/bin/wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
+
+alias gpg="gpg2"
+
+# check current monitor
+alias check-mon='xrandr -q | grep " connected" | cut -d ' ' -f1'
+
+# show response header of website
+function showheader() {
+    clear && wget -q -S -O - $1 > /dev/null
+}
