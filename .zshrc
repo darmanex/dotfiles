@@ -116,14 +116,15 @@ plugins=(
 	command-not-found
 	last-working-dir
 	git
-	history-substring-search
 	sublime
 	vagrant
 	zsh-syntax-highlighting
+    history-substring-search
 	zsh-autosuggestions
 	kubectl
 	docker
     ruby
+    history-search-multi-word
 	)
 
 export TERM=xterm-256color
@@ -157,6 +158,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
 ## MySQL
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
@@ -387,3 +391,15 @@ alias check-mon='xrandr -q | grep " connected" | cut -d ' ' -f1'
 function showheader() {
     clear && curl -k -L -I $1
 }
+
+# switch to namespace
+alias kcn="kubectl config set-context $(kubectl config current-context) --namespace "
+alias ktl="kubectl"
+
+# function to check port listen
+port_listen() {
+    sudo lsof -i:$1 | grep LISTEN
+}
+
+# create server cert
+alias gen_cert_server="openssl req -new -x509 -keyout server.pem -out server.pem -days 365 -nodes"
