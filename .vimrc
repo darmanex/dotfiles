@@ -11,6 +11,9 @@
 let $vimhome=fnamemodify(resolve(expand("~/.vimrc")), ':p:h')
 let $vundle=$vimhome."/bundle/Vundle.vim"
 
+" https://stackoverflow.com/questions/62354810/error-detected-while-processing-function-vundleinstallernew
+set shell=/usr/bin/bash
+
 " Be iMproved
 set nocompatible
 
@@ -37,6 +40,7 @@ call vundle#begin()
     Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
     Plugin 'flazz/vim-colorschemes'             " Colorschemes
     Plugin 'alx741/vim-hindent'                  " Indentation
+    Plugin 'Yggdroot/indentLine'                " Indentline
 
     "-------------------=== Snippets support ===--------------------
     Plugin 'garbas/vim-snipmate'                " Snippets manager
@@ -168,6 +172,19 @@ let NERDTreeWinSize=40
 autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
 nmap " :NERDTreeToggle<CR>
 
+" Indent style
+let g:indentLine_char = '┊' 
+
+" ALE
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
+
+" Yaml Indentation
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+
 "=====================================================
 "" SnipMate settings
 "=====================================================
@@ -285,6 +302,9 @@ let g:hindent_indent_size = 2
 " How can I open a NERDTree automatically when vim starts up if no files were specified?
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+# Enable mouse scrolling
+set mouse=a
 
 "set runtimepath+=~/.vim_runtime
 
