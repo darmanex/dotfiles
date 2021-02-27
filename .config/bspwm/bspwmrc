@@ -21,6 +21,9 @@ sh ~/.local/bin/start-mpd.sh
 # compositor
 pgrep -x picom > /dev/null || picom -G &
 
+# launch alacritty
+pgrep -x alacritty >> /dev/null || alacritty
+
 # auto lock when screen has inactivity
 #xautolock -notify 30 -notifier "notify-send -u critical -t 10000 'The screen will be LOCKING in 30s'" -time 10 -locker "~/.local/bin/lock.sh"
 
