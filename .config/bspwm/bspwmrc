@@ -19,7 +19,7 @@ pgrep -x xscreensaver >> /dev/null || xscreensaver &
 sh ~/.local/bin/start-mpd.sh
 
 # compositor
-pgrep -x picom > /dev/null || picom -CG &
+pgrep -x picom > /dev/null || picom --config ~/.config/picom/picom.conf -b &
 
 # launch alacritty
 #pgrep -x alacritty >> /dev/null || alacritty
