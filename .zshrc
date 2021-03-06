@@ -403,3 +403,17 @@ port_listen() {
 
 # create server cert
 alias gen_cert_server="openssl req -new -x509 -keyout server.pem -out server.pem -days 365 -nodes"
+
+# load function
+fpath=( ~/.config/zshfn "${fpath[@]}" )
+autoload -Uz $fpath[1]/*(.:t)
+
+# restart network
+alias network-restart="sudo systemctl restart NetworkManager"
+
+# check age of linux system created
+alias cek-age-system="sudo tune2fs -l /dev/sda1 | grep created"
+alias cek-age-ssh="stat -c %y /etc/ssh/ssh_host*pub"
+
+# update mirror rank
+alias update-mirror="sudo sh -c 'rankmirrors -n 10 mirrorlist.bak > mirrorlist'"
