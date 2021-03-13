@@ -59,6 +59,7 @@ call vundle#begin()
     "-------------------=== Python  ===-----------------------------
     Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
     Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
+    Plugin 'vim-scripts/indentpython.vim'
 
     "-------------------=== Colors ===------------------------------
     Plugin 'NLKNguyen/papercolor-theme'
@@ -303,7 +304,7 @@ let g:hindent_indent_size = 2
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-# Enable mouse scrolling
+" Enable mouse scrolling
 set mouse=a
 
 "set runtimepath+=~/.vim_runtime
