@@ -159,6 +159,9 @@ ctrl + alt + c
 ctrl + alt + b
     ~/.local/bin/battery_status.sh
 
+super + shift + s 
+    ~/.local/bin/word-lookup/word-lookup.sh
+
 # volume control
 #XF86AudioMute
 #  amixer -c 1 sset Master toggle
