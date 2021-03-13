@@ -4,5 +4,6 @@ light-locker-command -l &
 
 xrandr --dpi 125.37
 
-# sounds
-xbindkeys
+nitrogen --restore &
+
+bspwm
