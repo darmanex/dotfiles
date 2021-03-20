@@ -72,7 +72,7 @@
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
     #geometry = "300x5-30+20"
-    geometry = "300x5-30-20"
+    geometry = "0x4-25+25"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -81,7 +81,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 5
+    transparency = 15
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -129,10 +129,10 @@
     separator_height = 2
 
     # Padding between text and separator.
-    padding = 25
+    padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 25
+    horizontal_padding = 10
 
     # Define a color for the separator.
     # possible values are:
@@ -161,7 +161,7 @@
 
 [frame]
     width = 2
-    color = "#4d679a"
+    color = "#282a36"
 
 [shortcuts]
 
@@ -187,21 +187,21 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2e3440"
-    foreground = "#d8dee9"
-    frame_color = "#8bc34a"
+    background = "#282a36"
+    foreground = "#6272a4"
+    #frame_color = "#8bc34a"
     timeout = 3
 
 [urgency_normal]
-    background = "#2e3440"
-    foreground = "#d8dee9"
-    frame_color = "#2e3440"
+    background = "#282a36"
+    foreground = "#bd93f9"
+    #frame_color = "#2e3440"
     timeout = 5
 
 [urgency_critical]
-    background = "#2e3440"
-    foreground = "#ffffff"
-    frame_color = "#bf616a"
+    background = "#ff5555"
+    foreground = "#f8f8f2"
+    #frame_color = "#bf616a"
     timeout = 8
 
 
