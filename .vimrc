@@ -63,6 +63,7 @@ call vundle#begin()
 
     "-------------------=== Colors ===------------------------------
     Plugin 'NLKNguyen/papercolor-theme'
+    Plugin 'sainnhe/everforest'
 
 call vundle#end()                           " required
 filetype on
