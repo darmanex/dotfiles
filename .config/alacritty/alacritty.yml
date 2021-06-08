@@ -2,43 +2,51 @@ env:
   TERM: xterm-256color
 
 import:
-  - ~/.config/alactritty/themes/dracula.yml
+  - /home/darm/.config/alacritty/themes/gruvbox-dark.yml
 
 # Font configuration (changes require restart)
 font:
   # The size to use.
-  size: 5.5
+  size: 6.0
   # The normal (roman) font face to use.
   normal:
-    #family: Source Code Pro
+    family: Source Code Pro
     #family: Dejavu Sans Mono
     #family: Iosevka
-    family: Fira Code
+    #family: Fira Code
+    #family: Jetbrains Mono
+    #family: Hack
     # Style can be specified to pick a specific face.
     style: Semibold
 
   # The bold font face
   bold:
-    #family: Source Code Pro
+    family: Source Code Pro
     #family: Dejavu Sans Mono
     #family: Iosevka
-    family: Fira Code
+    #family: Fira Code
+    #family: Jetbrains Mono
+    #family: Hack
     # Style can be specified to pick a specific face.
     style: SemiBold
 
   # The italic font face
   italic:
-    #family: Source Code Pro
+    family: Source Code Pro
     #family: Dejavu Sans Mono
     #family: Iosevka
-    family: Fira Code
+    #family: Fira Code
+    #family: Jetbrains Mono
+    #family: Hack
     # Style can be specified to pick a specific face.
     style: Italic
   bold_italic:
-    #family: Source Code Pro
+    family: Source Code Pro
     #family: Dejavu Sans Mono
     #family: Iosevka
-    family: Fira Code
+    #family: Fira Code
+    #family: Jetbrains Mono
+    #family: Hack
 
   offset:
     x: 1
@@ -50,8 +58,8 @@ window:
     columns: 80
     lines: 24
   padding:
-    x: 2
-    y: 6
+    x: 1
+    y: 1
   dynamic_title: true
 
 draw_bold_text_with_bright_colors: true
@@ -60,6 +68,16 @@ background_opacity: 1.0
 
 scrolling:
   history: 20000
+
+  # scrolling distance multiplire
+  multiplier: 3
+
+mouse:
+  double_click: { threshold: 300 }
+  hints:
+    launcher:
+      program: xdg-open
+    modifiers: Control
 
     #key_bindings:
     # (Windows, Linux, and BSD only)
