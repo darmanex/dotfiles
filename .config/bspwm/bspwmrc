@@ -9,7 +9,7 @@ $HOME/.config/polybar/launch.sh &
 $HOME/.local/bin/battery_low.sh &
 
 # notification daemon
-pgrep -x dunst >> /dev/null || dunst -config ~/.config/dunst/dunstrc &
+pgrep -x dunst >> /dev/null || dunst -config ~/.config/dunst/dunstrc-dracula &
 
 # launch screensaver
 pgrep -x xscreensaver >> /dev/null || xscreensaver &
