@@ -127,8 +127,11 @@ super + {Left,Down,Up,Right}
 # my own keys
 #
 # lock
+#super + @l
+#    ~/.local/bin/lock.sh
+
 super + @l
-    ~/.local/bin/lock.sh
+    xscreensaver-command -lock
 
 # screenshot
 # select screenshot
@@ -161,6 +164,9 @@ ctrl + alt + b
 
 super + shift + s 
     ~/.local/bin/word-lookup/word-lookup.sh
+
+super + w 
+    thunar
 
 # volume control
 #XF86AudioMute
