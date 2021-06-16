@@ -12,6 +12,9 @@ super + @space
      #~/Packages/polybar-themes/polybar-12/scripts/launcher
            #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
 
+super + d
+    rofi -show calc -modi calc -no-show-match -no-sort -no-bold
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Config has been reloaded!'
