@@ -44,7 +44,8 @@ bspc config pointer_follows_focus false
 bspc config center_pseudo_tiled  true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
+bspc rule -a Chromium desktop='^3'
+bspc rule -a firefox-developer-edition desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
