@@ -64,6 +64,7 @@ call vundle#begin()
     "-------------------=== Colors ===------------------------------
     Plugin 'NLKNguyen/papercolor-theme'
     Plugin 'sainnhe/everforest'
+    Plugin 'dracula/vim', { 'name': 'dracula' }
 
 call vundle#end()                           " required
 filetype on
@@ -95,11 +96,12 @@ endif
 """"""""""" END of PowerLine Settings  """""""""""""""
 
 
-syntax on                               " syntax highlight
+syntax enable                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
 set background=dark
 colorscheme onedark                      " set color scheme
+packadd! dracula
 
 set number                                  " show line numbers
 set ruler
