@@ -53,8 +53,12 @@ bspc config pointer_action3         resize_corner
 
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^3'
-bspc rule -a firefox-developer-edition desktop='^2'
+bspc rule -a alacritty desktop='^1' follow=on
+bspc rule -a firefox-developer-edition desktop='^2' follow=on
+bspc rule -a discord desktop='^4' follow=on
+bspc rule -a teams desktop='^3' follow=on
+bspc rule -a Thunderbird desktop='^5' follow=on
+bspc rule -a Chromium desktop='^6' follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
