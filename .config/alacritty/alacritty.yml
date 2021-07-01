@@ -97,7 +97,7 @@ cursor:
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    blinking: On
+    blinking: Always
   blink_interval:   450
     #key_bindings:
     # (Windows, Linux, and BSD only)
