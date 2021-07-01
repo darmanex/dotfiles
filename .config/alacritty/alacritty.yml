@@ -79,6 +79,26 @@ mouse:
       program: xdg-open
     modifiers: Control
 
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Beam
+
+    # Cursor blinking state
+    #
+    # Values for `blinking`:
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: On
+  blink_interval:   450
     #key_bindings:
     # (Windows, Linux, and BSD only)
     #- { key: V,        mods: Control|Shift, action: Paste            }
