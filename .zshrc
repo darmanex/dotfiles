@@ -9,7 +9,8 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
 # Default editor
-export EDITOR="vim"
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Rust environment
 export PATH="$HOME/.cargo/bin:$PATH"
