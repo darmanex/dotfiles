@@ -9,8 +9,8 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
 # Default editor
-export VISUAL=vim
-export EDITOR="$VISUAL"
+#export VISUAL=vim
+export EDITOR="vim"
 
 # Rust environment
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -162,8 +162,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+#bindkey '^[[A' history-substring-search-up
+#bindkey '^[[B' history-substring-search-down
+
+bindkey "^R" history-incremental-pattern-search-backward
 
 ## MySQL
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
@@ -358,7 +360,8 @@ function finder() {
 alias psgroup="ps -eo user,group,supgrp,args | grep"
 
 # generating a random password
-alias pass-gen="openssl rand -base64 12 | colrm 32"
+#alias pass-gen="openssl rand -base64 12 | colrm 32"
+alias pass-gen="cat /dev/urandom | env LC_ALL=C tr -dc 'A-Za-z0-9_!@#$%^&*()[\-+];.:{|}~<=>?' | head -c 24 && echo"
 
 alias sctl="systemctl"
 
@@ -423,3 +426,6 @@ alias cek-age-ssh="stat -c %y /etc/ssh/ssh_host*pub"
 
 # update mirror rank
 alias update-mirror="sudo sh -c 'rankmirrors -n 10 mirrorlist.bak > mirrorlist'"
+
+# ps memory usage
+alias ps-memory="sudo python ~/Tools/Utility/ps_mem.py"
