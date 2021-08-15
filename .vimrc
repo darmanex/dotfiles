@@ -65,6 +65,8 @@ call vundle#begin()
     Plugin 'NLKNguyen/papercolor-theme'
     Plugin 'sainnhe/everforest'
     Plugin 'dracula/vim', { 'name': 'dracula' }
+    Plugin 'metalelf0/base16-black-metal-scheme'
+    Plugin 'haishanh/night-owl.vim'
 
 call vundle#end()                           " required
 filetype on
@@ -100,8 +102,9 @@ syntax enable                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
 set background=dark
-colorscheme onedark                      " set color scheme
-packadd! dracula
+"packadd! dracula
+colorscheme night-owl " set color scheme
+
 
 set number                                  " show line numbers
 set ruler
@@ -150,7 +153,7 @@ set hlsearch	                            " highlight search results
 "=====================================================
 "" AirLine settings
 "=====================================================
-let g:airline_theme='onedark'
+let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
@@ -310,6 +313,13 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Enable mouse scrolling
 set mouse=a
 
+""""" enable 24bit true color
+
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 "set runtimepath+=~/.vim_runtime
 
 "source ~/.vim_runtime/vimrcs/basic.vim
@@ -321,3 +331,6 @@ set mouse=a
 "source ~/.vim_runtime/my_configs.vim
 "catch
 "endtry
+
+" issue color scheme: https://github.com/kovidgoyal/kitty/issues/108#issuecomment-320492663
+let &t_ut=''
