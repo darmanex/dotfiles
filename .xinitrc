@@ -10,17 +10,9 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-# start compositor
-picom -b
-
 exec bspwm
 
 sh ~/.local/bin/screensaver.sh
 
 sh ~/.local/bin/touchpad
 
-# stalonetray
-stalonetray -c ~/.config/stalonetray/stalonetrayrc-single &
-
-# notification daemon
-dunst &
