@@ -1,1 +1,1 @@
-yay -S ranger highlight odt2txt pdftotext mediainfo w3m
+yay -S ranger highlight odt2txt pdftotext mediainfo ueberzug
