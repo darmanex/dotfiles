@@ -7,28 +7,28 @@ import:
 # Font configuration (changes require restart)
 font:
   # The size to use.
-  size: 5
+  size: 6
   # The normal (roman) font face to use.
   normal:
     #family: Source Code Pro
     #family: Dejavu Sans Mono
     #family: Iosevka
-    #family: Fira Code
-    #family: Jetbrains Mono
+    family: Fira Code
+    #family: JetBrainsMono Nerd Font Mono
     #family: Hack
-    family: Terminus
+    #family: Terminus
     # Style can be specified to pick a specific face.
     style: Semibold
 
   # The bold font face
   bold:
     #family: Source Code Pro
-    #family: Dejavu Sans Mono
-    #family: Iosevka
-    #family: Fira Code
-    #family: Jetbrains Mono
+      #family: Dejavu Sans Mono
+      #family: Iosevka
+    family: Fira Code
+    #family: JetBrainsMono Nerd Font Mono
     #family: Hack
-    family: Terminus
+    #family: Terminus
     # Style can be specified to pick a specific face.
     style: SemiBold
 
@@ -37,20 +37,20 @@ font:
     #family: Source Code Pro
     #family: Dejavu Sans Mono
     #family: Iosevka
-    #family: Fira Code
-    #family: Jetbrains Mono
+    family: Fira Code
+    #family: JetBrainsMono Nerd Font Mono
     #family: Hack
-    family: Terminus
+    #family: Terminus
     # Style can be specified to pick a specific face.
     style: Italic
   bold_italic:
     #family: Source Code Pro
     #family: Dejavu Sans Mono
     #family: Iosevka
-    #family: Fira Code
-    #family: Jetbrains Mono
+    family: Fira Code
+    #family: JetBrainsMono Nerd Font Mono
     #family: Hack
-    family: Terminus
+    #family: Terminus
 
   offset:
     x: 1
