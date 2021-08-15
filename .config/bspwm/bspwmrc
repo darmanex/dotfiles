@@ -6,23 +6,16 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh &
 
 # get battery when low
-$HOME/.local/bin/battery_low.sh &
+$HOME/.local/bin/battery_low-notif.sh &
 
 # notification daemon
-pgrep -x dunst >> /dev/null || dunst -config ~/.config/dunst/dunstrc-dracula &
+pgrep -x dunst >> /dev/null || dunst -config ~/.config/dunst/dunstrc-dracula-soldark &
 
 # launch screensaver
 pgrep -x xscreensaver >> /dev/null || xscreensaver &
 
-# MPD daemon start (if no other user instance exists)
-[ ! -s ~/.config/mpd/pid ] && mpd
-sh ~/.local/bin/start-mpd.sh
-
 # compositor
 pgrep -x picom > /dev/null || picom --config ~/.config/picom/picom.conf -b &
-
-# launch alacritty
-#pgrep -x alacritty >> /dev/null || alacritty
 
 # auto lock when screen has inactivity
 #xautolock -notify 30 -notifier "notify-send -u critical -t 10000 'The screen will be LOCKING in 30s'" -time 10 -locker "~/.local/bin/lock.sh"
@@ -52,13 +45,13 @@ bspc config pointer_action2         resize_side
 bspc config pointer_action3         resize_corner
 
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a alacritty desktop='^1' follow=on
+bspc rule -a nixnote2 desktop='^8' state=floating follow=on
+bspc rule -a kitty desktop='^1' follow=on
 bspc rule -a firefox-developer-edition desktop='^2' follow=on
 bspc rule -a discord desktop='^4' follow=on
 bspc rule -a teams desktop='^3' follow=on
 bspc rule -a Thunderbird desktop='^5' follow=on
-bspc rule -a Chromium desktop='^6' follow=on
+bspc rule -a subl desktop='^6' follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
