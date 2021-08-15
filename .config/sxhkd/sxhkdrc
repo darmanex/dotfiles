@@ -138,16 +138,16 @@ super + @l
 
 # screenshot
 # select screenshot
-ctrl + shift + @p
-    ~/.local/bin/ss-select.sh
+#ctrl + shift + @p
+#    ~/.local/bin/ss-select.sh
     #~/.local/bin/screenshot.sh
 	#maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%s).png
 # full screenshot
-control + Print
-    ~/.local/bin/ss-full.sh
+#control + Print
+#    ~/.local/bin/ss-full.sh
 
-control + super + Print
-    ~/.local/bin/ss-window.sh
+#control + super + Print
+#    ~/.local/bin/ss-window.sh
 
 # Flameshot
 super + Print
