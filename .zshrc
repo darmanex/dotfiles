@@ -130,8 +130,8 @@ plugins=(
     history-search-multi-word
 	)
 
-#export TERM=xterm-256color
-export TERM=xterm-kitty
+export TERM=xterm-256color
+#export TERM=xterm-kitty
 
 export PAGER="most"
 
