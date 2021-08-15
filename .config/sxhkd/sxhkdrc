@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # program launcher
 super + @space
@@ -148,6 +148,10 @@ control + Print
 
 control + super + Print
     ~/.local/bin/ss-window.sh
+
+# Flameshot
+super + Print
+    flameshot gui
 
 # Open Firefox
 ctrl + shift + f
