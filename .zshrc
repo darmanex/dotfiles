@@ -131,7 +131,6 @@ plugins=(
 	)
 
 export TERM=xterm-256color
-#export TERM=xterm-kitty
 
 export PAGER="most"
 
@@ -222,7 +221,7 @@ alias lz="less ~/.zshrc"
 alias hg="history | grep"
 
 # Flushing DNS
-alias flushdns="dscacheutil -flushcache"
+alias flushdns="nscd -K"
 
 # make zsh know about hosts already accessed by SSH
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
@@ -235,7 +234,7 @@ alias cls="clear"
 
 # showing ssh config
 alias sshcfg="less ~/.ssh/config"
-alias con="kitty +kitten ssh"
+alias con="ssh"
 # Lists: src=vitorbritto
 # -------------------
 
@@ -269,6 +268,7 @@ alias lt="ls --tree"
 # `cat` with beautiful colors. requires Pygments installed.
 # sudo easy_install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
+alias cat='c'
 
 # check network card
 alias cek-nic="lspci -knn | grep Net -A2"
@@ -437,4 +437,4 @@ alias update-mirror="sudo sh -c 'rankmirrors -n 10 mirrorlist.bak > mirrorlist'"
 # ps memory usage
 alias ps-memory="sudo python ~/Tools/Utility/ps_mem.py"
 
-alias cat='bat --paging=never'
+alias catb='bat --paging=never'
