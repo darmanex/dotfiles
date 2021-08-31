@@ -9,7 +9,7 @@ $HOME/.config/polybar/launch.sh &
 $HOME/.local/bin/battery_low-notif.sh &
 
 # notification daemon
-pgrep -x dunst >> /dev/null || dunst -config ~/.config/dunst/dunstrc-onesoldark &
+pgrep -x dunst >> /dev/null || dunst -config ~/.config/dunst/dunstrc &
 
 # launch screensaver
 pgrep -x xscreensaver >> /dev/null || xscreensaver &
@@ -19,6 +19,8 @@ pgrep -x picom > /dev/null || picom --config ~/.config/picom/picom.conf -b &
 
 # auto lock when screen has inactivity
 #xautolock -notify 30 -notifier "notify-send -u critical -t 10000 'The screen will be LOCKING in 30s'" -time 10 -locker "~/.local/bin/lock.sh"
+
+#$HOME/.local/bin/alt-tab.sh &
 
 #bspc monitor LVDS-1 -d 1 2 3 4 5
 #bspc monitor HDMI-2 -d 6 7 8 9 0
