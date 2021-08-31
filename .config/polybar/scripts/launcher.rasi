@@ -112,7 +112,8 @@ element-icon {
     size:                           28px;
     border:                         0px;
 
-    /* we need to add these to fix rasi theme bug on rofi v1.7.0 (https://github.com/davatorium/rofi/issues/1397#issuecomment-908683906) */
+    /* we need to add these to fix rasi theme bug on rofi v1.7.0 (https://github.com/davatorium/rofi/issues/1397#issuecomment-908683906)
+    relase notes: https://github.com/davatorium/rofi/releases/tag/1.7.0 */
     background-color:               inherit;
     text-color:                     inherit;
 }
@@ -123,7 +124,8 @@ element-text {
     vertical-align:                 0;
     margin:                         2px 0px 2px 2px;
 
-    /* we need to add these to fix rasi theme bug on rofi v1.7.0 (https://github.com/davatorium/rofi/issues/1397#issuecomment-908683906) */
+    /* we need to add these to fix rasi theme bug on rofi v1.7.0 (https://github.com/davatorium/rofi/issues/1397#issuecomment-908683906)
+    relase notes: https://github.com/davatorium/rofi/releases/tag/1.7.0 */
     background-color:               inherit;
     text-color:                     inherit;
 }
