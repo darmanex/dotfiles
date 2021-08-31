@@ -67,6 +67,9 @@ call vundle#begin()
     Plugin 'dracula/vim', { 'name': 'dracula' }
     Plugin 'metalelf0/base16-black-metal-scheme'
     Plugin 'haishanh/night-owl.vim'
+    Plugin 'ayu-theme/ayu-vim'
+    Plugin 'arcticicestudio/nord-vim'
+    Plugin 'jacoborus/tender.vim'
 
 call vundle#end()                           " required
 filetype on
@@ -103,7 +106,7 @@ syntax enable                               " syntax highlight
 set t_Co=256                                " set 256 colors
 set background=dark
 "packadd! dracula
-colorscheme night-owl " set color scheme
+colorscheme tender " set color scheme
 
 
 set number                                  " show line numbers
@@ -153,7 +156,7 @@ set hlsearch	                            " highlight search results
 "=====================================================
 "" AirLine settings
 "=====================================================
-let g:airline_theme='dracula'
+let g:airline_theme='tender'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
