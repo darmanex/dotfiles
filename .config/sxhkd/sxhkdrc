@@ -205,3 +205,6 @@ XF86MonBrightnessUp
 
 XF86MonBrightnessDown
   xbacklight -dec 5%
+
+alt + Tab   	
+        rofi -show window -show-icons
