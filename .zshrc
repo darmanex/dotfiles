@@ -111,24 +111,24 @@ HISTFILE=~/.zsh_history
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	colored-man-pages
-	archlinux
-	cp
-	dirhistory
-	sudo
-	command-not-found
-	last-working-dir
-	git
-	sublime
-	vagrant
-	zsh-syntax-highlighting
+  colored-man-pages
+  archlinux
+  cp
+  dirhistory
+  sudo
+  command-not-found
+  last-working-dir
+  git
+  sublime
+  vagrant
+  zsh-syntax-highlighting
     history-substring-search
-	zsh-autosuggestions
-	kubectl
-	docker
+  zsh-autosuggestions
+  kubectl
+  docker
     ruby
     history-search-multi-word
-	)
+  )
 
 export TERM=xterm-256color
 
@@ -150,7 +150,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags	
+# Compilation flags 
 # export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -267,8 +267,10 @@ alias lt="ls --tree"
 
 # `cat` with beautiful colors. requires Pygments installed.
 # sudo easy_install Pygments
-alias c='pygmentize -O style=monokai -f console256 -g'
-alias cat='c'
+# alias c='pygmentize -O style=monokai -f console256 -g'
+# alias cat='c'
+alias c="highlight -O ansi"
+alias cat="c"
 
 # check network card
 alias cek-nic="lspci -knn | grep Net -A2"
@@ -368,7 +370,7 @@ alias psgroup="ps -eo user,group,supgrp,args | grep"
 
 # generating a random password
 #alias pass-gen="openssl rand -base64 12 | colrm 32"
-alias pass-gen="cat /dev/urandom | env LC_ALL=C tr -dc 'A-Za-z0-9_!@#$%^&*()[\-+];.:{|}~<=>?' | head -c 24 && echo"
+alias pass-gen="head /dev/urandom | LC_ALL=C tr -dc 'A-Za-z0-9-!#$%&()*+,./;?@[\]^_{|}~' | head -c 24 && echo"
 
 alias sctl="systemctl"
 
@@ -438,3 +440,15 @@ alias update-mirror="sudo sh -c 'rankmirrors -n 10 mirrorlist.bak > mirrorlist'"
 alias ps-memory="sudo python ~/Tools/Utility/ps_mem.py"
 
 alias catb='bat --paging=never'
+
+alias vim="nvim"
+alias oldvim="\vim"
+
+# Check current limits on your system review systemd-journald
+alias journald-limits="sudo journalctl -b -u systemd-journald"
+
+# check battery
+alias cek-battery="acpi --battery | cut -d, -f2"
+
+# To browse all installed packages with an instant preview of each package
+alias list-packages="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
