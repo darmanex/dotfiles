@@ -70,4 +70,4 @@ playlist_separate_albums = "no"
 
 # get the notification via dunst
 execute_on_song_change = notify-send -i "~/.local/share/icons/misc/itunes-blue-icon.png" "Now Playing ♫" "$(mpc current)"
-#execute_on_song_change = ~/.local/bin/cover_display.sh
+#execute_on_song_change = notify-send -i "$(mpc current)" "$(kunst --size 78x78 --music_dir ~/Music --silent)"
