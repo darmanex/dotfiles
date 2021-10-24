@@ -151,7 +151,7 @@ super + @l
 
 # Flameshot
 super + Print
-    flameshot gui
+    ~/.local/bin/flameshot-imagemagick.rb
 
 # Open Firefox
 ctrl + shift + f
