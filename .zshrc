@@ -234,6 +234,7 @@ alias cls="clear"
 
 # showing ssh config
 alias sshcfg="less ~/.ssh/config"
+alias esshcfg="vim ~/.ssh/config"
 alias con="ssh"
 # Lists: src=vitorbritto
 # -------------------
