@@ -453,3 +453,5 @@ alias cek-battery="acpi --battery | cut -d, -f2"
 
 # To browse all installed packages with an instant preview of each package
 alias list-packages="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+
+export XDG_CONFIG_HOME="$HOME/.config"
