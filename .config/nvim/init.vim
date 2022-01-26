@@ -54,7 +54,7 @@ let g:deoplete#enable_at_startup = 1
 
 "-------------------=== Lighline config ===-----------------------
 " lightline color scheme config
-let &t_ut="" " kitty recommendation for background issues
+let &t_ut='' "kitty recommendation for background issues
 
 if (has("termguicolors"))
  set termguicolors
@@ -206,3 +206,9 @@ nnoremap <C-l> <C-w>l
 :inoremap kj <Esc>
 :vnoremap jk <Esc>
 :vnoremap kj <Esc>
+
+" reload nvim
+nnoremap <silent>sv :source $MYVIMRC<CR>
+
+" clear the highlighting search
+nnoremap <silent> ,<space> :nohlsearch<CR>
