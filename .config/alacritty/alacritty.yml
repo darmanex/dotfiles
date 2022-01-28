@@ -2,12 +2,12 @@ env:
   TERM: xterm-256color
 
 import:
-  - /home/darm/.config/alacritty/themes/one-dark.yml
+  - /home/darm/.config/alacritty/themes/gruvbox-material-dark.yml
 
 # Font configuration (changes require restart)
 font:
   # The size to use.
-  size: 6
+  size: 7
   # The normal (roman) font face to use.
   normal:
     #family: Source Code Pro
@@ -23,8 +23,8 @@ font:
   # The bold font face
   bold:
     #family: Source Code Pro
-      #family: Dejavu Sans Mono
-      #family: Iosevka
+    #family: Dejavu Sans Mono
+    #family: Iosevka
     family: Fira Code
     #family: JetBrainsMono Nerd Font Mono
     #family: Hack
@@ -95,7 +95,7 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Beam
+    shape: Block
 
     # Cursor blinking state
     #
@@ -105,23 +105,50 @@ cursor:
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
     blinking: Always
-  blink_interval:   450
-    #key_bindings:
-    # (Windows, Linux, and BSD only)
-    #- { key: V,        mods: Control|Shift, action: Paste            }
-    #- { key: C,        mods: Control|Shift, action: Copy             }
-    #- { key: Insert,   mods: Shift,         action: PasteSelection   }
-    #- { key: Key0,     mods: Control,       action: ResetFontSize    }
-    #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
-    #  - { key: Add,      mods: Control,       action: IncreaseFontSize }
-    #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
-    #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  blink_interval: 450
+  #key_bindings:
+  # (Windows, Linux, and BSD only)
+  #- { key: V,        mods: Control|Shift, action: Paste            }
+  #- { key: C,        mods: Control|Shift, action: Copy             }
+  #- { key: Insert,   mods: Shift,         action: PasteSelection   }
+  #- { key: Key0,     mods: Control,       action: ResetFontSize    }
+  #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  #  - { key: Add,      mods: Control,       action: IncreaseFontSize }
+  #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  #- { key: Paste,                    action: Paste                            }
+  #- { key: Copy,                     action: Copy                             }
+  #- { key: L,         mods: Control, action: ClearLogNotice                   }
+  #- { key: L,         mods: Control, chars: "\x0c"                            }
+  #- { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  #- { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+colors:
+  # Default colors
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
 
-    #- { key: Paste,                    action: Paste                            }
-    #- { key: Copy,                     action: Copy                             }
-    #- { key: L,         mods: Control, action: ClearLogNotice                   }
-    #- { key: L,         mods: Control, chars: "\x0c"                            }
-    #- { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
-    #- { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
-    #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
-    #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+  # Normal colors
+  normal:
+    black: '#000000'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#caa9fa'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#bfbfbf'
+
+  # Bright colors
+  bright:
+    black: '#575b70'
+    red: '#ff6e67'
+    green: '#5af78e'
+    yellow: '#f4f99d'
+    blue: '#caa9fa'
+    magenta: '#ff92d0'
+    cyan: '#9aedfe'
+    white: '#e6e6e6'
+theme: Dracula
