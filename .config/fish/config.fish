@@ -4,15 +4,26 @@ source ~/.config/fish/aliases.fish
 #    source ~/.config/fish/env.fish
 #end
 
+#set -gx TERM xterm-256color
+
+set -Ux LANG en_US.UTF-8 
+set -Ux LC_ALL en_US.UTF-8
+
 set -gx EDITOR nvim
 
 set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx XDG_DATA_DIRS /usr/local/share/:/usr/share/
 
 set -gx fish_add_path -aP $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin $HOME/Development/golang $HOME/Development/golang/bin /usr/local/opt/mysql@5.6/bin
 set -Ux JAVA_HOME /opt/src/jdk-current
 set -Ux ANDROID_HOME /home/$USER/Android/Sdk
 set -Ux NDK_HOME $ANDROID_HOME/android-ndk-r15c
 set -Ux PATH $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin $HOME/Development/golang $HOME/Development/golang/bin $PATH
+
+# set kitty terminfo
+#set -gx TERMINFO $HOME/.terminfo bash -i
+#set -gx env TERMINFO=$HOME/.terminfo bash -i
+#set -gx TERMINFO /home/darm/.terminfo exec bash -i
 
 #function fish_prompt
 #    printf '%s%s%s%s ❯❯❯ ' \
