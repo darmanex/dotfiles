@@ -17,13 +17,14 @@ Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Code completion engine
 Plug 'SirVer/ultisnips' " Snippets engine
 Plug 'honza/vim-snippets' " A collection of snippets
-Plug 'fladson/vim-kitty' " kitty config syntax highlighting
+"Plug 'fladson/vim-kitty' " kitty config syntax highlighting
 Plug 'maximbaz/lightline-ale' " Lighline status for errors
 
 "-------------------=== Color Themes ===---------------------
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'joshdick/onedark.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ayu-theme/ayu-vim'
@@ -54,13 +55,13 @@ let g:deoplete#enable_at_startup = 1
 
 "-------------------=== Lighline config ===-----------------------
 " lightline color scheme config
-let &t_ut='' "kitty recommendation for background issues
+"let &t_ut='' "kitty recommendation for background issues
 
 if (has("termguicolors"))
  set termguicolors
 endif
 set background=dark
-colorscheme github_dark
+colorscheme gruvbox
 
 let g:lightline = {
   \     'colorscheme': 'PaperColor',
@@ -170,6 +171,8 @@ let g:indentLine_char = '┊'
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$'] " Ignore files in NERDTree
 let NERDTreeWinSize=20 " Set size window
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger="<tab>"
