@@ -54,7 +54,7 @@ alias lt='ls --tree'
 alias hg="history | grep"
 alias gpg="gpg2"
 alias vim="nvim"
-alias ps="ps -ef | grep"
+alias psf="ps -ef | grep"
 
 # syntax highlighting
 alias cat="pygmentize -f terminal256 -O style=monokai -g"
