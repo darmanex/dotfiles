@@ -7,49 +7,49 @@ import:
 # Font configuration (changes require restart)
 font:
   # The size to use.
-  size: 7
+  size: 6.5
   # The normal (roman) font face to use.
   normal:
-    #family: Source Code Pro
+    family: Source Code Pro Medium
     #family: Dejavu Sans Mono
     #family: Iosevka
-    family: Fira Code
+    #family: Fira Code
     #family: JetBrainsMono Nerd Font Mono
-    #family: Hack
+    #family: Hack Regular Nerd Font Complete
     #family: Terminus
     # Style can be specified to pick a specific face.
     style: Semibold
 
   # The bold font face
   bold:
-    #family: Source Code Pro
-    #family: Dejavu Sans Mono
+    family: Source Code Pro Medium
+      #family: Dejavu Sans Mono
     #family: Iosevka
-    family: Fira Code
+    #family: Fira Code
     #family: JetBrainsMono Nerd Font Mono
-    #family: Hack
+    #family: Hack Regular Nerd Font Complete
     #family: Terminus
     # Style can be specified to pick a specific face.
     style: SemiBold
 
   # The italic font face
   italic:
-    #family: Source Code Pro
+    family: Source Code Pro Medium
     #family: Dejavu Sans Mono
     #family: Iosevka
-    family: Fira Code
+    #family: Fira Code
     #family: JetBrainsMono Nerd Font Mono
-    #family: Hack
+    #family: Hack Regular Nerd Font Complete
     #family: Terminus
     # Style can be specified to pick a specific face.
     style: Italic
   bold_italic:
-    #family: Source Code Pro
-    #family: Dejavu Sans Mono
+    family: Source Code Pro Medium
+      #family: Dejavu Sans Mono
     #family: Iosevka
-    family: Fira Code
+    #family: Fira Code
     #family: JetBrainsMono Nerd Font Mono
-    #family: Hack
+    #family: Hack Regular Nerd Font Complete
     #family: Terminus
 
   offset:
@@ -124,31 +124,3 @@ cursor:
   #- { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
   #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
   #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
-colors:
-  # Default colors
-  primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
-
-  # Normal colors
-  normal:
-    black: '#000000'
-    red: '#ff5555'
-    green: '#50fa7b'
-    yellow: '#f1fa8c'
-    blue: '#caa9fa'
-    magenta: '#ff79c6'
-    cyan: '#8be9fd'
-    white: '#bfbfbf'
-
-  # Bright colors
-  bright:
-    black: '#575b70'
-    red: '#ff6e67'
-    green: '#5af78e'
-    yellow: '#f4f99d'
-    blue: '#caa9fa'
-    magenta: '#ff92d0'
-    cyan: '#9aedfe'
-    white: '#e6e6e6'
-theme: Dracula
