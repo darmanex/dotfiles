@@ -4,13 +4,12 @@
 
 # terminal emulator
 super + Return
-	kitty
+	st
 
 # program launcher
 super + @space
-     ~/.config/polybar/scripts/launcher
-     #~/Packages/polybar-themes/polybar-12/scripts/launcher
-           #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
+     rofi -no-lazy-grab -show drun -show-icons -theme $HOME/.config/polybar-mine.bak/scripts/launcher.rasi
+     #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
 
 super + d
     rofi -show calc -modi calc -no-show-match -no-sort -no-bold
@@ -158,7 +157,7 @@ super + Print
 
 # Open Firefox
 ctrl + shift + f
-    firefox-developer-edition
+    firefox
 
 super + p
     pkill -USR1 -x polybar
