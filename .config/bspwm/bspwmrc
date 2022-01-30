@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # status bar
-$HOME/.config/polybar/launch.sh &
+$HOME/.config/polybar/launch.sh --forest &
 
 # get battery when low
 $HOME/.local/bin/battery_low-notif.sh &
