@@ -215,3 +215,12 @@ nnoremap <silent>sv :source $MYVIMRC<CR>
 
 " clear the highlighting search
 nnoremap <silent> ,<space> :nohlsearch<CR>
+
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c,cpp,java,scala': { 'left': '/** ','right': '*/ ' } }
+let g:NERDCustomDelimiters = { 'sh,ruby,python': { 'left': '# ' } }
+let g:NERDCustomDelimiters = { 'conf,fstab,rc': { 'left': '# ' } }
+let g:NERDCustomDelimiters = { 'vim': { 'left': '" ' } }
