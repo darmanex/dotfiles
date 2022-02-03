@@ -3,7 +3,9 @@
   follow = mouse
   width = 300
   height = 200
-  offset = 10x50
+  #offset = 10x50
+  # geometry [{width}]x{height}][+/-{x}+/-{y}]
+  geometry = "335x0-0+0"
   origin = top-right
   shrink = no
   padding = 10
