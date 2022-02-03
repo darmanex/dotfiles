@@ -27,7 +27,7 @@ super + Escape
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r} $(notify-send 'BSPWM' 'Config has been reloaded!')
+	bspc {quit,wm -r} 
  
 # close and kill
 super + {_,shift + }q
