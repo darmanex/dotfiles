@@ -52,8 +52,8 @@
   timeout = 10
 
 [urgency_critical]
-  background = "#FB5607"
-  foreground = "#1b1e25"
+  background = "#F28FAD" 
+  foreground = "#1e1e27" 
   timeout = 20
 
 [spotify]
