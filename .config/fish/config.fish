@@ -4,7 +4,9 @@ source ~/.config/fish/aliases.fish
 #    source ~/.config/fish/env.fish
 #end
 
-set -gx TERM xterm-256color
+#set FISH_CLIPBOARD_CMD "cat" # Stop that.
+
+set -gx TERM screen-256color
 
 set -Ux LANG en_US.UTF-8 
 set -Ux LC_ALL en_US.UTF-8
