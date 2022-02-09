@@ -6,4 +6,6 @@ xrandr --dpi 125.37
 
 nitrogen --restore &
 
-bspwm
+dwm
+
+picom --config ~/.config/picom/picom.conf -b &
