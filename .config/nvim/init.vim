@@ -150,6 +150,8 @@ let g:ale_fix_on_save = 1
 " Commentarry settings
 autocmd FileType apache setlocal commentstring=#\ %s
 
+set guifont=JetbrainsMono\ Nerd\ Font\ 10
+
 " Cursor settings
 set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
                   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
@@ -171,8 +173,6 @@ let g:indentLine_char = '┊'
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$'] " Ignore files in NERDTree
 let NERDTreeWinSize=20 " Set size window
 nnoremap <C-t> :NERDTreeToggle<CR>
-
-set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 " Ultisnips settings
 let g:UltiSnipsExpandTrigger="<tab>"
