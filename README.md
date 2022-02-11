@@ -8,9 +8,9 @@ Hi! I use <a href="https://www.archlinux.org/"><img src="https://img.shields.io/
 
 My current setup:
 
-- WM: [bspwm](https://github.com/baskerville/bspwm)
+- WM: ~~[bspwm](https://github.com/baskerville/bspwm)~~ [dwm](https://dwm.suckless.org/)
 - X hotkey: [sxhkd](https://github.com/baskerville/sxhkd)
-- Status bar: [polybar](https://github.com/polybar/polybar)
+- Status bar: ~~[polybar](https://github.com/polybar/polybar)~~ bar status from scratch for dwm
 - Terminal: ~~[kitty](https://github.com/kovidgoyal/kitty)~~ [st](https://st.suckless.org/)
 - Shell: [fish](https://github.com/fish-shell/fish-shell)
 - Editor: [neovim](https://github.com/neovim/neovim) and [vscode](https://github.com/microsoft/vscode)
