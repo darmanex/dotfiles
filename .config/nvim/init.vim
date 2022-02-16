@@ -150,7 +150,7 @@ let g:ale_fix_on_save = 1
 " Commentarry settings
 autocmd FileType apache setlocal commentstring=#\ %s
 
-set guifont=JetbrainsMono\ Nerd\ Font\ 10
+set guifont=JuliaMono\ 10
 
 " Cursor settings
 set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
