@@ -6,7 +6,7 @@ source ~/.config/fish/aliases.fish
 
 #set FISH_CLIPBOARD_CMD "cat" # Stop that.
 
-set -gx TERM screen-256color
+set -gx TERM st-256color
 
 set -Ux LANG en_US.UTF-8 
 set -Ux LC_ALL en_US.UTF-8
@@ -16,11 +16,11 @@ set -gx EDITOR nvim
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_DATA_DIRS /usr/local/share/:/usr/share/
 
-set -gx fish_add_path -aP $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin $HOME/Development/golang $HOME/Development/golang/bin /usr/local/opt/mysql@5.6/bin
+#set -gx fish_add_path -aP $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin $HOME/Development/golang $HOME/Development/golang/bin /usr/local/opt/mysql@5.6/bin
 set -Ux JAVA_HOME /opt/src/jdk-current
 set -Ux ANDROID_HOME /home/$USER/Android/Sdk
 set -Ux NDK_HOME $ANDROID_HOME/android-ndk-r15c
-set -Ux PATH $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin $HOME/Development/golang $HOME/Development/golang/bin $PATH
+fish_add_path -g $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin $HOME/Development/golang $HOME/Development/golang/bin $PATH
 
 # set kitty terminfo
 #set -gx TERMINFO $HOME/.terminfo bash -i
@@ -105,3 +105,5 @@ end
 function clu
     awk 'END{sub(/\[/,""); print $1}' /var/log/pacman.log
 end
+
+starship init fish | source
