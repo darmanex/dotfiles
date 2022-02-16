@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Morten Linderud</title>
+    <link>https://linderud.dev/</link>
+    <description>Recent content on Morten Linderud</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nb</language>
+    <lastBuildDate>Tue, 24 Nov 2020 20:00:00 +0200</lastBuildDate><atom:link href="https://linderud.dev/index.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>PAM Bypass: when null(is not)ok</title>
+      <link>https://linderud.dev/blog/pam-bypass-when-nullis-notok/</link>
+      <pubDate>Tue, 24 Nov 2020 20:00:00 +0200</pubDate>
+      
+      <guid>https://linderud.dev/blog/pam-bypass-when-nullis-notok/</guid>
+      <description>The Problem Someone enters an IRC support channel and proclaims their dovecot server has been hacked and a non existing user sends spam email from their server. The initial reaction might be something along the lines of
+Wat ಠ_ಠ
+With the following assumption that the user clearly did something wrong. Hosting email is difficult after all. I don&amp;rsquo;t quite recall how rest of the support went, but it was solved and the root cause was not found.</description>
+    </item>
+    
+    <item>
+      <title>FOSS Activities in October 2020</title>
+      <link>https://linderud.dev/blog/foss-activities-in-october-2020/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://linderud.dev/blog/foss-activities-in-october-2020/</guid>
+      <description>I wanted to start writing these for myself as I have been reading quite a few monthly resports from Chris Lamb and other Debian contributors. They make for interesting content for readers curious about what distribution maintainers do during a month, and motivation for myself as not everything one does is visible work.
+I&amp;rsquo;ll try have some sort of structure with them, by starting off with the menial tasks, and add the meeting notes and misc contributions at the bottom.</description>
+    </item>
+    
+    <item>
+      <title>Improving the Secure Boot user experience</title>
+      <link>https://linderud.dev/blog/improving-the-secure-boot-user-experience/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0200</pubDate>
+      
+      <guid>https://linderud.dev/blog/improving-the-secure-boot-user-experience/</guid>
+      <description>Secure boot tooling is terrible, can we do better?
+Currently the most widely used tooling for secure boot is the Ubuntu sbsigntools and efitools. If you are currently using secure boot both of these packages are probably installed on your system. Both of them support the basics of generating signature lists and signing the EFI variables with certificates, but they still have differences which is a source of confusion.
+efitools has 3 different ways of generating signature lists: cert-to-efi-hash-list, cert-to-sig-list and hash-to-efi-sig-list.</description>
+    </item>
+    
+    <item>
+      <title>Packaging LXD for Arch Linux</title>
+      <link>https://linderud.dev/blog/packaging-lxd-for-arch-linux/</link>
+      <pubDate>Mon, 27 Apr 2020 23:30:00 +0100</pubDate>
+      
+      <guid>https://linderud.dev/blog/packaging-lxd-for-arch-linux/</guid>
+      <description>With the release of 3.20, LXD was included into the community repository of Arch Linux in January, and has currently been sitting there happily for the past months. LXD is a container manager from Canonical that manages containers as if they where independent machines in a cluster. I have somehow taken to calling them &amp;ldquo;containers-as-machines&amp;rdquo;. This is in contrast to podman and docker which would be &amp;ldquo;containers-as-applications&amp;rdquo;. Think of lxd as ganeti, but for containers.</description>
+    </item>
+    
+    <item>
+      <title>Reproducible Arch Linux Packages</title>
+      <link>https://linderud.dev/blog/reproducible-arch-linux-packages/</link>
+      <pubDate>Mon, 11 Nov 2019 12:00:00 +0100</pubDate>
+      
+      <guid>https://linderud.dev/blog/reproducible-arch-linux-packages/</guid>
+      <description>Arch Linux has been involved with the reproducible builds efforts since 2016. The goal is to achieve deterministic building of software packages to enhance the security of the distribution.
+After almost 3 years of continued effort, along with the release of pacman 5.2 and contributions from a lot of people, we are finally able to reproduce packages distributed by Arch Linux!
+This enables users to build packages and compare them with the ones distributed by the Arch Linux team.</description>
+    </item>
+    
+    <item>
+      <title>Mailpile, sendmail and procmail</title>
+      <link>https://linderud.dev/blog/mailpile-sendmail-and-procmail/</link>
+      <pubDate>Wed, 09 Jul 2014 00:00:00 +0100</pubDate>
+      
+      <guid>https://linderud.dev/blog/mailpile-sendmail-and-procmail/</guid>
+      <description>What is Mailpile? [Mailpile] (https://www.mailpile.is) is mail client with a rather unusual goal in todays world. It wants to be free, open-source, privacy oriented and easy to use with encryption. This all comes with the goal of being self-hosted.
+This is a contrast to Protonmail who still keeps all your information on their servers, making people with a slight trust issue look at you in a rather funny way. However, Protonmail and Mailpile is among several email providers in the wake of the NSA scandal to try and give you secure options to gmail, outlook and yahoo.</description>
+    </item>
+    
+    <item>
+      <title>The State of Hy</title>
+      <link>https://linderud.dev/blog/the-state-of-hy/</link>
+      <pubDate>Fri, 17 Jan 2014 00:00:00 +0100</pubDate>
+      
+      <guid>https://linderud.dev/blog/the-state-of-hy/</guid>
+      <description>So, with the recent hipster attitude of posting a &amp;ldquo;State of *&amp;rdquo; every year, I thought i&amp;rsquo;d try and do it for something I have been contributing to for the past 6 months, Hy.
+Short introduction Hy is a Lisp leechingliving off the Python world. It compiles down to Python&amp;rsquo;s AST and is completely bidirectional, you can import Hy into Python and vica versa seamlessly! It just works. Hy is also more portable then normal Python code.</description>
+    </item>
+    
+  </channel>
+</rss>
