@@ -15,7 +15,7 @@ super + d
     rofi -show calc -modi calc -no-show-match -no-sort -no-bold
 
 super + a
-    dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#ff33cc' -nf '#3399ff' -fn 'Vector Mono-7'
+    dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#ff33cc' -nf '#3399ff' -fn 'Wuncon Siji-10'
 
 # make sxhkd reload its configuration files:
 super + Escape
