@@ -15,7 +15,7 @@ super + d
     rofi -show calc -modi calc -no-show-match -no-sort -no-bold
 
 super + a
-    dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#ff33cc' -nf '#3399ff' -fn 'Wuncon Siji-10'
+    dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#ff33cc' -nf '#3399ff' -fn 'Wuncon Siji-10' -c
 
 super + shift + p
     rofi -show p -modi p:rofi-power-menu -theme Paper  -font "SpaceMono Nerd Font-5" -width 10 -lines 6
@@ -32,6 +32,9 @@ super + @l
 
 super + Print
     ~/.local/bin/flameshot-imagemagick.rb
+
+super + ctrl + h
+    st -t 'st+: htop' -g 168x30+4+20 -e htop
 
 # Open Firefox
 ctrl + shift + f
