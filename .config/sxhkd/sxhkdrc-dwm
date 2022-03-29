@@ -8,7 +8,8 @@ super + Return
 
 # program launcher
 super + @space
-     rofi -no-lazy-grab -show drun -show-icons -theme $HOME/.config/polybar-mine.bak/scripts/launcher.rasi
+     rofi  -no-lazy-grab -show drun -show-icons -theme ~/.config/rofi/rofidmenu.rasi
+     #rofi -no-lazy-grab -show drun -show-icons -theme $HOME/.config/polybar-mine.bak/scripts/launcher.rasi
      #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
 
 super + d
@@ -18,8 +19,9 @@ super + a
     dmenu_run -l 10 -p "Run:" -nb '#1e1e1e' -sf '#1e1e1e' -sb '#ff33cc' -nf '#3399ff' -fn 'Wuncon Siji-10' -c
 
 super + shift + p
-    rofi -show p -modi p:rofi-power-menu -theme Paper  -font "SpaceMono Nerd Font-5" -width 10 -lines 6
+    #rofi -show p -modi p:rofi-power-menu -theme Paper  -font "SpaceMono Nerd Font-5" -width 10 -lines 6
     #rofi -show -p modi p:rofi-power
+    ~/.local/bin/dmenu_powermenu 
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -32,6 +34,9 @@ super + @l
 
 super + Print
     ~/.local/bin/flameshot-imagemagick.rb
+
+control + Print
+    ~/.local/bin/ss-select.sh
 
 super + ctrl + h
     st -t 'st+: htop' -g 168x30+4+20 -e htopi
