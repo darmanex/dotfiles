@@ -32,6 +32,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'projekt0n/github-nvim-theme'
 Plug 'mhinz/vim-startify'
+Plug 'rebelot/kanagawa.nvim'
 
 "-------------------=== Utility ===-------------------------------
 Plug 'mengelbrecht/lightline-bufferline'
