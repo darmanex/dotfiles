@@ -20,7 +20,7 @@ set -gx XDG_DATA_DIRS /usr/local/share/:/usr/share/
 set -Ux JAVA_HOME /opt/src/jdk-current
 set -Ux ANDROID_HOME /home/$USER/Android/Sdk
 set -Ux NDK_HOME $ANDROID_HOME/android-ndk-r15c
-fish_add_path -g $HOME/.local/bin $HOME/.gem/ruby/2.7.0/bin $HOME/Development/golang $HOME/Development/golang/bin $PATH
+fish_add_path -g $HOME/.local/bin $HOME/.local/bin/dmenu $HOME/.gem/ruby/2.7.0/bin $HOME/Development/golang $HOME/Development/golang/bin $PATH
 
 # set kitty terminfo
 #set -gx TERMINFO $HOME/.terminfo bash -i
