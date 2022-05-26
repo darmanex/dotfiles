@@ -11,6 +11,8 @@ set -gx TERM st-256color
 set -Ux LANG en_US.UTF-8 
 set -Ux LC_ALL en_US.UTF-8
 
+set -gx AWS_PROFILE darman
+
 set -gx EDITOR nvim
 
 set -gx XDG_CONFIG_HOME $HOME/.config
