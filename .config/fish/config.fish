@@ -6,6 +6,10 @@ source ~/.config/fish/aliases.fish
 
 #set FISH_CLIPBOARD_CMD "cat" # Stop that.
 
+set -gx PATH $PATH $HOME/.krew/bin
+
+set -x SHELL_ICON 🐠
+
 set -gx TERM st-256color
 
 set -Ux LANG en_US.UTF-8 

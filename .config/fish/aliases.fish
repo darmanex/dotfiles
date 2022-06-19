@@ -32,6 +32,8 @@ alias da="dotfiles add"
 alias dcm="dotfiles commit -m"
 alias dp="dotfiles push"
 alias dst='dotfiles status'
+alias gcm="git commit -m"
+alias glog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 alias ef="nvim ~/.config/fish/config.fish"
 alias sf="source ~/.config/fish/config.fish"
