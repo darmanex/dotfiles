@@ -33,6 +33,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'projekt0n/github-nvim-theme'
 Plug 'mhinz/vim-startify'
 Plug 'rebelot/kanagawa.nvim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 "-------------------=== Utility ===-------------------------------
 Plug 'mengelbrecht/lightline-bufferline'
@@ -62,10 +63,10 @@ if (has("termguicolors"))
  set termguicolors
 endif
 set background=dark
-colorscheme gruvbox
+colorscheme ayu
 
 let g:lightline = {
-  \     'colorscheme': 'PaperColor',
+            \     'colorscheme': 'catppuccin',
   \     'active': {
   \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
   \         'right': [['lineinfo'], ['percent'], ['filetype', 'fileformat', 'fileencoding']]
@@ -225,3 +226,13 @@ let g:NERDCustomDelimiters = { 'c,cpp,java,scala': { 'left': '/** ','right': '*/
 let g:NERDCustomDelimiters = { 'sh,ruby,python': { 'left': '# ' } }
 let g:NERDCustomDelimiters = { 'conf,fstab,rc': { 'left': '# ' } }
 let g:NERDCustomDelimiters = { 'vim': { 'left': '" ' } }
+
+" copy to clipboard
+"set clipboard+=unnamedplus
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>P "+P
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+y$
