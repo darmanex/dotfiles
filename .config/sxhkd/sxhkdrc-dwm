@@ -61,7 +61,13 @@ super + shift + s
     ~/.local/bin/word-lookup/word-lookup.sh
 
 super + w 
+    passmenu
+
+ctrl + alt + w
     thunar
+
+ctrl + shift + s
+    ~/.local/bin/websearch.sh
 
 # volume control
 #XF86AudioMute
