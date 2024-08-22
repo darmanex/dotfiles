@@ -16,8 +16,8 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 
 # Default editor
-export VISUAL="nvim"
-export EDITOR="nvim"
+export VISUAL="vim"
+export EDITOR="vim"
 
 # Rust environment
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -72,7 +72,6 @@ plugins=(
   zsh-autosuggestions
   kubectl
   docker
-  history-search-multi-word
   )
 
 export TERM=xterm-256color
@@ -410,8 +409,8 @@ alias ps-memory="sudo python ~/Tools/Utility/ps_mem.py"
 
 alias catb='bat --paging=never'
 
-alias vim="nvim"
-alias oldvim="\vim"
+#alias vim="nvim"
+#alias oldvim="\vim"
 
 # Check current limits on your system review systemd-journald
 alias journald-limits="sudo journalctl -b -u systemd-journald"
@@ -457,4 +456,12 @@ bindkey '\eOF'    end-of-line        # gnome-terminal
 export SDKMAN_DIR="/home/darm/.sdkman"
 [[ -s "/home/darm/.sdkman/bin/sdkman-init.sh" ]] && source "/home/darm/.sdkman/bin/sdkman-init.sh"
 
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/darm/.zshrc'
 
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+export FZF_DEFAULT_COMMAND='fdfind --type f'
+export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
