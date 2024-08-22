@@ -1,0 +1,59 @@
+"----------- News ---------------------"
+http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml
+
+"------------ Hacker -------------------"
+https://www.evilsocket.net/atom.xml hacker
+https://emersion.fr/blog/atom.xml opensource
+https://www.joelonsoftware.com/feed/ hacker "Joelon Software"
+https://cdn.jwz.org/blog/feed/
+https://dataswamp.org/~solene/rss.xml
+https://blog.haschek.at/rss.xml "~Christian Haschlek's Blog"
+https://blog.fox-it.com/feed/ "~Fox-IT International Blog"
+http://www.harmj0y.net/blog/feed/ "~harmj0y - Security at the misfortune of others"
+https://sneak.berlin/feed.xml "~Jeffrey Paul"
+https://securityonline.info/feed/
+https://linderud.dev/index.xml
+
+"------------ Linux --------------------"
+https://www.archlinux.org/feeds/news/ news "Arch Linux: Recent News Updates"
+https://www.i-bsd.com/feed.xml techspeciality "iBSD - Proving BSD as a viable alternative"
+https://www.romanzolotarev.com/rss.xml techspeciality "Mastering the Web - Roman Zolotarev"
+https://www.gamingonlinux.com/article_rss.php techspeciality "GamingOnLinux Latest Articles"
+file:///home/darm/.newsboat/feeds/linux_kernel_feeds.xml linux "Linux Kernel"
+https://aur.archlinux.org/rss/ aur "Arch Linux AUR"
+https://archlinux.org/feeds/releases/ archrelease "Arch Linux New Release"
+https://lwn.net/headlines/rss lwn "LWN"
+https://opensource.com/feed opensource "Opensource"
+
+"------------ Cloud Things -------------"
+https://kevin.deldycke.com/feed/index.html "K8S guy"
+
+"------------ Network All Things -------"
+http://www.lifeneteng.com/index.xml "~LIFE of a NETwork admin"
+https://www.shanekillen.com/feeds/posts/default "~Network Fun!!!"
+http://www.showconfig.net/feed "~Networks Are Cool — A Network Engineer's Blog"
+https://www.notarobot.fr/rss/ "~Not A Robot"
+https://unixsheikh.com/feed.rss "~unixsheikh.com"
+https://weberblog.net/feed/ "~Weberblog.net  IT-Security, Networks, IPv6, DNSSEC, NTP, Monitoring, DIY"
+
+"------------ Free Resources -----------"
+https://www.freetutorialsus.com/feed/ "~Download Udemy Courses For Free  freetutorials.us"
+
+"------------ REDDIT -------------------"
+https://www.reddit.com/r/AskNetsec.rss "~/r/AskNetSec"
+https://www.reddit.com/r/commandline.rss "~/r/commandline"
+https://www.reddit.com/r/consulting.rss "~/r/consulting"
+https://www.reddit.com/r/cybersecurity.rss "~/r/cybersecurity"
+https://www.reddit.com/r/DataHoarder.rss "~/r/DataHoarder"
+https://www.reddit.com/r/hacking.rss "~/r/hacking"
+https://www.reddit.com/r/homelab.rss "~/r/homelab"
+https://www.reddit.com/r/HomeNetworking.rss "~/r/HomeNetworking"
+https://www.reddit.com/r/HowToHack.rss "~/r/HowToHack"
+https://www.reddit.com/r/iiiiiiitttttttttttt.rss "~/r/iiiiiiitttttttttttt"
+https://www.reddit.com/r/irc.rss "~/r/irc"
+https://www.reddit.com/r/linuxadmin.rss "~/r/linuxadmin"
+https://www.reddit.com/r/linuxquestions.rss "~/r/linuxquestions"
+https://www.reddit.com/r/netsec.rss "~/r/netsec"
+https://www.reddit.com/r/netsecstudents.rss "~/r/netsecstudents"
+https://www.reddit.com/r/networking.rss "~/r/networking"
+https://www.reddit.com/r/vim.rss "~/r/vim"
