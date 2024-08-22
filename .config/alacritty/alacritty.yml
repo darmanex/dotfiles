@@ -1,0 +1,126 @@
+env:
+  TERM: xterm-256color
+
+import:
+  - /home/darm/.config/alacritty/themes/gruvbox-material-dark.yml
+
+# Font configuration (changes require restart)
+font:
+  # The size to use.
+  size: 6.5
+  # The normal (roman) font face to use.
+  normal:
+    family: Source Code Pro Medium
+    #family: Dejavu Sans Mono
+    #family: Iosevka
+    #family: Fira Code
+    #family: JetBrainsMono Nerd Font Mono
+    #family: Hack Regular Nerd Font Complete
+    #family: Terminus
+    # Style can be specified to pick a specific face.
+    style: Semibold
+
+  # The bold font face
+  bold:
+    family: Source Code Pro Medium
+      #family: Dejavu Sans Mono
+    #family: Iosevka
+    #family: Fira Code
+    #family: JetBrainsMono Nerd Font Mono
+    #family: Hack Regular Nerd Font Complete
+    #family: Terminus
+    # Style can be specified to pick a specific face.
+    style: SemiBold
+
+  # The italic font face
+  italic:
+    family: Source Code Pro Medium
+    #family: Dejavu Sans Mono
+    #family: Iosevka
+    #family: Fira Code
+    #family: JetBrainsMono Nerd Font Mono
+    #family: Hack Regular Nerd Font Complete
+    #family: Terminus
+    # Style can be specified to pick a specific face.
+    style: Italic
+  bold_italic:
+    family: Source Code Pro Medium
+      #family: Dejavu Sans Mono
+    #family: Iosevka
+    #family: Fira Code
+    #family: JetBrainsMono Nerd Font Mono
+    #family: Hack Regular Nerd Font Complete
+    #family: Terminus
+
+  offset:
+    x: 1
+    y: 1
+  glyph_offset.y: 0
+
+window:
+  dimensions:
+    columns: 80
+    lines: 24
+  padding:
+    x: 1
+    y: 1
+  dynamic_title: true
+
+draw_bold_text_with_bright_colors: true
+
+window.opacity: 1.0
+
+scrolling:
+  history: 20000
+
+  # scrolling distance multiplire
+  multiplier: 3
+
+mouse:
+  double_click: { threshold: 300 }
+  hints:
+    launcher:
+      program: xdg-open
+    modifiers: Control
+
+# Font rendering that broke some fonts: https://github.com/alacritty/alacritty/issues/4083#issuecomment-670076698
+use_thin_strokes: false
+
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Block
+
+    # Cursor blinking state
+    #
+    # Values for `blinking`:
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: Always
+  blink_interval: 450
+  #key_bindings:
+  # (Windows, Linux, and BSD only)
+  #- { key: V,        mods: Control|Shift, action: Paste            }
+  #- { key: C,        mods: Control|Shift, action: Copy             }
+  #- { key: Insert,   mods: Shift,         action: PasteSelection   }
+  #- { key: Key0,     mods: Control,       action: ResetFontSize    }
+  #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  #  - { key: Add,      mods: Control,       action: IncreaseFontSize }
+  #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  #- { key: Paste,                    action: Paste                            }
+  #- { key: Copy,                     action: Copy                             }
+  #- { key: L,         mods: Control, action: ClearLogNotice                   }
+  #- { key: L,         mods: Control, chars: "\x0c"                            }
+  #- { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  #- { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
