@@ -24,6 +24,7 @@ https://aur.archlinux.org/rss/ aur "Arch Linux AUR"
 https://archlinux.org/feeds/releases/ archrelease "Arch Linux New Release"
 https://lwn.net/headlines/rss lwn "LWN"
 https://opensource.com/feed opensource "Opensource"
+https://travishorn.com/rss.xml
 
 "------------ Cloud Things -------------"
 https://kevin.deldycke.com/feed/index.html "K8S guy"
