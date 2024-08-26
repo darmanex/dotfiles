@@ -1,0 +1,115 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	st
+
+# program launcher
+super + @space
+     rofi  -no-lazy-grab -show drun -show-icons -theme ~/.config/rofi/rofidmenu.rasi
+     #rofi -no-lazy-grab -show drun -show-icons -theme $HOME/.config/polybar-mine.bak/scripts/launcher.rasi
+     #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
+
+super + d
+    rofi -show calc -modi calc -no-show-match -no-sort -no-bold
+
+super + a
+    dmenu_run -l 10 -p "Run:" -nb '#1e1e1e' -sf '#1e1e1e' -sb '#ff33cc' -nf '#3399ff' -fn 'Wuncon Siji-10' -c
+
+super + shift + p
+    #rofi -show p -modi p:rofi-power-menu -theme Paper  -font "SpaceMono Nerd Font-5" -width 10 -lines 6
+    #rofi -show -p modi p:rofi-power
+    ~/.local/bin/dmenu_powermenu 
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Config has been reloaded!'
+
+# my own keys
+
+super + @l
+    xscreensaver-command -lock
+
+super + Print
+    ~/.local/bin/flameshot-imagemagick.rb
+
+control + Print
+    ~/.local/bin/ss-select.sh
+
+super + ctrl + h
+    st -t 'st+: htop' -g 168x30+4+20 -e htopi
+
+super + s
+    rofi-files
+
+# Open Firefox
+ctrl + shift + f
+    firefox
+
+ctrl + shift + w
+    ~/Packages/rofi-wifi-menu/rofi-wifi-menu.sh
+
+ctrl + alt + c
+    zenity --calendar
+
+ctrl + alt + b
+    ~/.local/bin/battery_status.sh
+
+super + shift + s 
+    ~/.local/bin/word-lookup/word-lookup.sh
+
+super + w 
+    passmenu
+
+ctrl + alt + w
+    thunar
+
+ctrl + shift + s
+    ~/.local/bin/websearch.sh
+
+# volume control
+#XF86AudioMute
+#  amixer -c 1 sset Master toggle
+
+#XF86AudioLowerVolume
+#  amixer -c 1 sset Master 3%-
+
+#XF86AudioRaiseVolume
+#  amixer -c 1 sset Master 3%+
+
+#XF86AudioMicMute
+#  sh -c "if amixer get Capture,0 | grep -q '\[on\]' ; then amixer -q set Capture,0 nocap ; else amixer -q set Capture,0 cap; fi"
+# ALSA
+
+XF86AudioMute
+    amixer set Master toggle
+    #~/.local/bin/volume.sh mute
+
+XF86AudioLowerVolume
+    amixer set Master 5%-
+    #~/.local/bin/volume.sh down
+
+XF86AudioRaiseVolume
+    amixer set Master 5%+
+    #~/.local/bin/volume.sh up
+
+super + m
+    ~/.local/bin/volume.sh mute
+
+super + u
+    ~/.local/bin/volume.sh up
+
+super + o
+    ~/.local/bin/volume.sh down
+
+# brightness control
+XF86MonBrightnessUp
+  xbacklight -inc 5%
+
+XF86MonBrightnessDown
+  xbacklight -dec 5%
+
+alt + Tab   	
+        rofi -show window -lines 10 -width 400 -display-window ' Applications'
