@@ -9,7 +9,6 @@ export TMUX_CONF="$XDG_CONFIG_HOME/tmux/tmux.conf"
 export PATH="/usr/bin:/usr/local/bin:$PATH"
 
 # Allow any custom binaries
-#export PATH=$HOME/.local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Ruby gems
@@ -18,6 +17,8 @@ export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 # Default editor
 export VISUAL="vim"
 export EDITOR="vim"
+
+alias ev="vim ~/.vimrc"
 
 # Rust environment
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -29,12 +30,10 @@ export LESS='-R --use-color -Dd+r$Du+b$'
 
 # Go environment
 export GOPATH=/mnt/data/darm/Development/golang
-#export GOBIN=$GOPATH/bin
-#export GOROOT=/usr/local/bin/go
-#export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-export PATH=$GOPATH/bin:$PATH
+export GOBIN=$GOPATH/bin
 
 # Python environemt
+#export GOROOT=/usr/local/bin/go
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 #if command -v pyenv 1>/dev/null 2>&1; then
@@ -77,8 +76,6 @@ plugins=(
 export TERM=xterm-256color
 
 export PAGER="most"
-
-#fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -144,9 +141,6 @@ alias lz="less ~/.zshrc"
 # history
 alias hg="history | grep"
 
-# Flushing DNS
-alias flushdns="nscd -K"
-
 # make zsh know about hosts already accessed by SSH
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
@@ -194,7 +188,7 @@ alias cek-soundcard="lspci -v | grep -i -A7 audio"
 alias cek-wifi-driver="lspci -k | grep wifi"
 
 # Kill firefox
-alias kill-ff="kill -9 `ps ax|grep 'firefox-developer-edition' | awk '{print $1}'`"
+alias kill-ff="kill -9 `ps ax|grep 'firefox' | awk '{print $1}'`"
 
 # kill msteams
 alias kill-teams="kill -9 `ps ax|grep '/usr/share/teams/teams' | awk '{print $1}'`"
@@ -342,10 +336,6 @@ alias wifi-up="sudo ip link set wlp3s0 up"
 alias clu="awk 'END{sub(/\[/,""); print $1}' /var/log/pacman.log"
 alias clup="egrep 'pacman -Syu' /var/log/pacman.log | tail -1"
 
-# Firefox stuff
-#alias kill-ff="ps auxww | grep -i 'Firefox Developer Edition' | grep -v grep | awk '{ print $2 }' | xargs kill -9"
-alias kill-ff="kill -9 `ps ax|grep 'firefox-developer-edition' | awk '{print $1}'`"
-
 # Get top proses eating cpu
 alias ps-cpu-usage="ps aux | sort -nr -k 3 | head -10"
 
@@ -355,7 +345,6 @@ alias ps-mem-usage="ps aux | sort -nr -k 4 | head -10"
 # Start tmux when terminal launched
 if [ "$TMUX" = ""  ]; then tmux new -s activity; fi
 
-# testing download speed
 alias test-dl="/usr/bin/wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 
 alias gpg="gpg2"
@@ -405,12 +394,14 @@ alias cek-age-ssh="stat -c %y /etc/ssh/ssh_host*pub"
 alias update-mirror="sudo sh -c 'rankmirrors -n 10 mirrorlist.bak > mirrorlist'"
 
 # ps memory usage
-alias ps-memory="sudo python ~/Tools/Utility/ps_mem.py"
+alias ps-memory="sudo python /mnt/data/darm/Tools/Utility/ps_mem.py"
 
 alias catb='bat --paging=never'
 
 #alias vim="nvim"
 #alias oldvim="\vim"
+# Blinking cursor using Kitty & tmux
+#alias vim='TERM=xterm-kitty vim'
 
 # Check current limits on your system review systemd-journald
 alias journald-limits="sudo journalctl -b -u systemd-journald"
@@ -424,15 +415,6 @@ alias list-packages="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=revers
 # https://github.com/graysky2/configs/blob/master/dotfiles/.zshrc#L47
 # fix zsh annoying history behavior
 h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
-
-#autoload -Uz up-line-or-beginning-search
-#autoload -Uz down-line-or-beginning-search
-#zle -N up-line-or-beginning-search
-#zle -N down-line-or-beginning-search
-#bindkey '\eOA' up-line-or-beginning-search
-#bindkey '\e[A' up-line-or-beginning-search
-#bindkey '\eOB' down-line-or-beginning-search
-#bindkey '\e[B' down-line-or-beginning-search
 
 # suckless terminal config
 # https://git.suckless.org/st/file/FAQ.html
