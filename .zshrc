@@ -12,7 +12,7 @@ export PATH="/usr/bin:/usr/local/bin:$PATH"
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Ruby gems
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
 
 # Default editor
 export VISUAL="vim"
