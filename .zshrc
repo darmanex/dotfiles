@@ -167,8 +167,8 @@ alias cat="c"
 alias cek-nic="lspci -knn | grep Net -A2"
 
 # Export JAVA
-export PATH=$PATH:/opt/src/jdk-current/bin
-export JAVA_HOME=/opt/src/jdk-current
+export PATH=$PATH:/usr/lib/jvm/default/bin
+export JAVA_HOME=/usr/lib/jvm/default
 
 ## Android SDK
 export ANDROID_HOME=/home/$USER/Android/Sdk
