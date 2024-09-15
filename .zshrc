@@ -87,7 +87,12 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 ## Stopping VM Guest
 alias mc2db-stop="vboxmanage controlvm 'MC2-DB-ONLINE' savestate"
 alias mc2api-stop="vboxmanage controlvm 'MC2-RESTAPI-ONLINE' savestate"
+alias start-kali="vboxmanage startvm "Kali Linux" --type headless"
+alias start-debian="vboxmanage startvm "Debian Server" --type headless"
+alias start-freebsd="vboxmanage startvm "FreeBSD" --type headless"
+alias start-fedora="vboxmanage startvm "Fedora Server 34" --type headless"
 
+alias xcopy="xclip -sel clip <"
 
 alias pcin="sudo pacman -S"
 alias pcs="pacman -Ss"
