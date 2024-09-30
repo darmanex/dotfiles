@@ -25,6 +25,7 @@ https://archlinux.org/feeds/releases/ archrelease "Arch Linux New Release"
 https://lwn.net/headlines/rss lwn "LWN"
 https://opensource.com/feed opensource "Opensource"
 https://travishorn.com/rss.xml
+https://www.phoronix.com/rss.php
 
 "------------ Cloud Things -------------"
 https://kevin.deldycke.com/feed/index.html "K8S guy"
