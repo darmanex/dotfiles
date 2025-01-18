@@ -13,6 +13,7 @@ http://www.harmj0y.net/blog/feed/ "~harmj0y - Security at the misfortune of othe
 https://sneak.berlin/feed.xml "~Jeffrey Paul"
 https://securityonline.info/feed/
 https://linderud.dev/index.xml
+https://dustri.org/b/atom.xml
 
 "------------ Linux --------------------"
 https://www.archlinux.org/feeds/news/ news "Arch Linux: Recent News Updates"
@@ -26,6 +27,7 @@ https://lwn.net/headlines/rss lwn "LWN"
 https://opensource.com/feed opensource "Opensource"
 https://travishorn.com/rss.xml
 https://www.phoronix.com/rss.php
+https://dataswamp.org/~solene/rss.xml
 
 "------------ Cloud Things -------------"
 https://kevin.deldycke.com/feed/index.html "K8S guy"
