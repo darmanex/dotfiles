@@ -10,6 +10,7 @@ Plug 'nordtheme/vim'
 Plug 'dense-analysis/ale'
 Plug 'maralla/completor.vim'
 Plug 'maralla/completor-neosnippet'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
