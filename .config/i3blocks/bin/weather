@@ -1,0 +1,2 @@
+weather=$( curl -s "wttr.in/Kendari?format=1" | sed 's/^/ /')
+echo $weather

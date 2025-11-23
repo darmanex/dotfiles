@@ -1,0 +1,23 @@
+#!/bin/sh
+
+case "$BLOCK_BUTTON" in
+    1)
+        # Left click to toggle mute
+        if pactl list sources | grep -q "Mute: yes"; then
+            pactl set-source-mute @DEFAULT_SOURCE@ toggle
+        else
+            pactl set-source-mute @DEFAULT_SOURCE@ toggle
+        fi
+        ;;
+esac
+
+# Display current status
+if pactl list sources | grep -q "Mute: yes"; then
+    #echo " ${RED} Mic Muted"
+    echo "<span foreground=\"red\" size=\"medium\"> Mic Muted</span>"
+    echo "#E53935"
+else
+    echo " Mic On"
+    echo "<span foreground=\"red\" size=\"medium\"> Mic On</span>"
+    echo "#4CAF50"
+fi
