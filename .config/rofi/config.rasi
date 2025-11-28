@@ -1,5 +1,5 @@
 configuration {
-    font: "Menlo for Powerline 10 10";
+    font: "Liberation Mono 11";
     line-margin: 10;
 
     display-ssh:    "";
