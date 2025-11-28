@@ -1,6 +1,32 @@
 separator=false
 markup=pango
 
+[pacman-updates]
+command=~/.config/i3blocks/bin/arch-update
+markup=pango
+interval= 3600
+QUIET=true
+WATCH=^linux.* ^pacman.*
+BASE_COLOR=#5fff5f
+UPDATE_COLOR=#FFFF85
+AUR=true
+LABEL=
+
+[aur-update]
+command=~/.config/i3blocks/bin/aur-update
+markup=pango
+format=json
+interval=43200
+UPDATE_COLOR=red
+QUIET=1
+IGNORE=root vidyodesktop
+#CACHE_UPDATES=0
+#FORCE_IPV4=1
+
+[simple-2]
+full_text=:
+color=#717171
+
 [cpu_usage]
 label=
 command=/usr/lib/i3blocks/cpu_usage
@@ -66,6 +92,21 @@ label=📅
 command=date '+%a, %d %b %Y at %H:%M %p'
 interval=5
 
+[simple-2]
+full_text=:
+color=#717171
+
+[nm-vpn]
+init_color=#FFFF00
+on_color=#00FF00
+label=VPN: 
+interval=5
+
+[openvpn]
+command=~/.config/i3blocks/bin/openvpn
+interval=20
+PID_FILE_FORMAT='/run/openvpn/*.pid'
+
 [dunst]
 command=/usr/lib/i3blocks/dunst
 format=json
@@ -74,6 +115,12 @@ interval=-1
 [shutdown_menu]
 full_text=
 command=~/.config/i3blocks/bin/powermenu
+
+[wifi]
+command=~/.config/i3blocks/bin/wifi
+label=Wifi:
+#INTERFACE=wlan0
+interval=60
 
 #[simple-2]
 #full_text=: :
