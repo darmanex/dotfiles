@@ -458,3 +458,10 @@ export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 source ~/.rvm/scripts/rvm
+
+# bun completions
+[ -s "/home/darm/.bun/_bun" ] && source "/home/darm/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
