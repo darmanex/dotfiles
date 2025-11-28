@@ -3,7 +3,7 @@ include ./binds.conf
 
 set $mod Mod1
 
-font pango:JetBrainsMono Nerd Font 9
+font pango:Liberation Mono Bold 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
