@@ -14,6 +14,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
+set clipboard=unnamedplus
+
 " https://stackoverflow.com/questions/62354810/error-detected-while-processing-function-vundleinstallernew
 set shell=/usr/bin/zsh
 
@@ -100,3 +102,13 @@ let g:ale_lint_on_text_changed = 'never'
 
 "inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 " end paste mode
+
+" auto reload
+if has('autocmd')
+  " Use an augroup to prevent duplicate autocommands from accumulating
+  augroup vimrc
+    autocmd!
+    " Source the configuration upon saving the file
+    autocmd BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw
+  augroup END
+endif
