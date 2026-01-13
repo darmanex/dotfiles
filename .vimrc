@@ -5,12 +5,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'nordtheme/vim'
 Plug 'dense-analysis/ale'
 Plug 'maralla/completor.vim'
 Plug 'maralla/completor-neosnippet'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ryanoasis/vim-devicons'
+Plug 'ctrlpvim/ctrlp.vim' " fuzzy files finder
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -52,10 +57,19 @@ set mouse=a               " mouse scrolling
 let &t_ut=''
 
 " AirLine settings
-let g:airline_theme='catppuccin'
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail_improved'
+"let g:airline_theme='catppuccin'
+"let g:airline#extensions#tabline#enabled=1
+"let g:airline#extensions#tabline#formatter='unique_tail_improved'
 let g:airline_powerline_fonts=1
+
+if ! exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" Customize specific symbols
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.dirty = '⚡'
+let g:airline_symbols.branch = ''
 
 if !has('gui_running') && &term =~ '\%(screen\|tmux\)'
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -63,7 +77,7 @@ if !has('gui_running') && &term =~ '\%(screen\|tmux\)'
 endif
 
 " Start NERDTree
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
 
 "====== yamllint start
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
@@ -112,3 +126,13 @@ if has('autocmd')
     autocmd BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw
   augroup END
 endif
+
+map <C-n> :NERDTreeToggle<CR>
+
+" use ctrl+<keys> to selected all text
+map <C-s> <esc>gg0vG$<CR>
+
+" clipboard Access
+" required : sudo pacman -S xclip
+" usage : press ctrl+c to copy text
+vnoremap <C-c> :w !xclip -i -sel c<CR><CR>
