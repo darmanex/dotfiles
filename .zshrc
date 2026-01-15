@@ -160,13 +160,26 @@ alias con="ssh"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
-
+alias ls="ls --color=auto --group-directories-first --classify"
 alias l="ls -l"
 alias lha="ls -lha"
 alias lt="ls --tree"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
 
-alias c="highlight -O ansi"
-alias cat="c"
+#alias c="highlight -O ansi"
+#alias cat="c"
+
+# screen recording
+function scr() {
+  local output="$PWD/record.mkv"
+  if [[ "$1" == *.mkv ]]; then
+    outpur="$1"
+  fi
+
+  ffmpeg -f x11grab -video_size 1366x768 -i :0.0 "$output"
+  echo "Video saved at: $output"
+}
 
 # check network card
 alias cek-nic="lspci -knn | grep Net -A2"
