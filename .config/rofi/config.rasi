@@ -1,5 +1,5 @@
 configuration {
-    font: "Liberation Mono 11";
+    font: "Cascadia Code 11";
     line-margin: 10;
 
     display-ssh:    "";
@@ -14,10 +14,14 @@ configuration {
 @theme "~/.config/rofi/themes/nord2.rasi"
 
 listview {
-    lines: 6;
+    lines: 15;
     columns: 2;
 }
 
 window {
     width: 50%;
+}
+
+configuration {
+    terminal: "xfce4-terminal";
 }
