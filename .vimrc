@@ -9,6 +9,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'nordtheme/vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'dense-analysis/ale'
 Plug 'maralla/completor.vim'
 Plug 'maralla/completor-neosnippet'
@@ -16,8 +17,21 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy files finder
 Plug 'tpope/vim-fugitive'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'dense-analysis/ale' " Asynchronous linting
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " LSP and Autocompletion
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'shrikecode/kyotonight.vim'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
+
+" JavaScript/TypeScript indentation
+au BufNewFile,BufRead *.js,*.ts,*.jsx,*.tsx
+    \ set tabstop=2 |
+    \ set shiftwidth=2 |
+    \ set expandtab
 
 set clipboard=unnamedplus
 
@@ -35,6 +49,17 @@ set background=dark       " Turn dark mode on
 set autoindent            " indent when moving to the next line while writing code
 set enc=utf-8
 set guifont=VictorMono\ 14
+set cursorline
+set cursorcolumn
+
+" Use indentation-based folding by default
+set foldmethod=indent
+
+" Start with all folds closed to get an overview
+set foldlevelstart=1
+
+" Show the fold column for easier navigation and visibility
+set foldcolumn=4
 
 filetype on               " Enable filetype detection
 filetype plugin on        " Enable filetype-specific plugins
@@ -44,7 +69,16 @@ syntax on                 " Turn syntax highlighting on
 
 set termguicolors "issue: https://stackoverflow.com/a/64763678/3237020
 
-colorscheme catppuccin_mocha
+let g:kyotonight_bold = 1
+let g:kyotonight_underline = 1
+let g:kyotonight_italic = 0
+let g:kyotonight_italic_comments = 0
+let g:kyotonight_uniform_status_lines = 0
+let g:kyotonight_cursor_line_number_background = 0
+let g:kyotonight_uniform_diff_background = 0
+let g:kyotonight_lualine_bold = 1
+
+colorscheme kyotonight
 
 set t_Co=256
 set enc=utf-8
@@ -57,6 +91,7 @@ set mouse=a               " mouse scrolling
 let &t_ut=''
 
 " AirLine settings
+let g:airline_theme='kyotonight'
 "let g:airline_theme='catppuccin'
 "let g:airline#extensions#tabline#enabled=1
 "let g:airline#extensions#tabline#formatter='unique_tail_improved'
@@ -80,7 +115,7 @@ endif
 "autocmd VimEnter * NERDTree | wincmd p
 
 "====== yamllint start
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 nu sts=0
 
 set foldlevelstart=20
 
