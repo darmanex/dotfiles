@@ -3,7 +3,7 @@ include ./binds.conf
 
 set $mod Mod1
 
-font pango:Liberation Mono Bold 9
+font pango:Lucida Grande Regular 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -102,10 +102,11 @@ client.unfocused        #002b36 #073642 #839496 #073642
 client.urgent           #002b36 #dc322f #fdf6e3 #002b36
 
 ## background
-exec --no-startup-id feh --bg-fill /mnt/data/darm/Pictures/Wallpapers/nord-48.png
+exec --no-startup-id feh --bg-fill /mnt/data/darm/Pictures/Wallpapers/29.jpg
 
 # lock the screen after 3 minutes inactivity
-exec_always --no-startup-id "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
+#exec_always --no-startup-id "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
+#exec_always --no-startup-id "xautolock -detectsleep -time 3 -locker \"i3lock -i /mnt/data/darm/Pictures/Wallpapers/japanStreets.png\""
 
 # Dual screen 
 #exec_always --no-startup-id xrandr --output HDMI-1 --auto --right-of DP-1
