@@ -129,11 +129,11 @@ alias gst="git status"
 alias gpush="git push"
 alias gpull="git pull"
 alias gfetch="git fetch"
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias da="dotfiles add"
-alias dcm="dotfiles commit -m"
-alias dp="dotfiles push"
-alias dst='dotfiles status'
+alias dfl="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dfla="dfl add"
+alias dflcm="dfl commit -m"
+alias dflp="dfl push"
+alias dst='dfl status'
 
 # stats
 alias ps='echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND" && ps aux | grep -i'
@@ -478,3 +478,5 @@ source ~/.rvm/scripts/rvm
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+source /usr/share/nvm/init-nvm.sh
