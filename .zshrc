@@ -92,6 +92,8 @@ alias start-debian="vboxmanage startvm 'Debian Server' --type headless"
 alias start-freebsd="vboxmanage startvm 'FreeBSD' --type headless"
 alias start-fedora="vboxmanage startvm 'Fedora Server 34' --type headless"
 
+alias umount-seagate="$HOME/.local/bin/umount-seagate"
+
 alias xcopy="xclip -sel clip <"
 
 alias pcin="sudo pacman -S"
