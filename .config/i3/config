@@ -72,6 +72,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Borders
+default_border pixel 2
+for_window [class="^.*"] border pixel 2
+
 # Bar appearance
 bar {
     font pango:Source Sans Pro-10 9
@@ -102,7 +106,7 @@ client.unfocused        #002b36 #073642 #839496 #073642
 client.urgent           #002b36 #dc322f #fdf6e3 #002b36
 
 ## background
-exec --no-startup-id feh --bg-fill /mnt/data/darm/Pictures/Wallpapers/29.jpg
+exec --no-startup-id feh --bg-fill /mnt/data/darm/Pictures/Wallpapers/ZQtHC817mOEO7sb.png
 
 # lock the screen after 3 minutes inactivity
 #exec_always --no-startup-id "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
