@@ -137,9 +137,6 @@ alias dflcm="dfl commit -m"
 alias dflp="dfl push"
 alias dst='dfl status'
 
-# stats
-alias ps='echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND" && ps aux | grep -i'
-
 # zsh stuff
 alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"
