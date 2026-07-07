@@ -171,3 +171,12 @@ map <C-s> <esc>gg0vG$<CR>
 " required : sudo pacman -S xclip
 " usage : press ctrl+c to copy text
 vnoremap <C-c> :w !xclip -i -sel c<CR><CR>
+
+" Run gofmt/goimports on save
+let g:go_fmt_command = "goimports"
+
+" Status bar highlights
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
