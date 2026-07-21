@@ -22,7 +22,7 @@ dunst -config ~/.config/dunst/dunstrc &
 pgrep -x xscreensaver >> /dev/null || xscreensaver &
 
 # compositor
-picom --config ~/.config/picom/picom-bspwm.conf &
+#picom --config ~/.config/picom/picom-bspwm.conf &
 
 # auto lock when screen has inactivity
 #xautolock -notify 30 -notifier "notify-send -u critical -t 10000 'The screen will be LOCKING in 30s'" -time 10 -locker "~/.local/bin/lock.sh"
