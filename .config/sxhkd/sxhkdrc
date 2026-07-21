@@ -3,32 +3,45 @@
 #
 
 # terminal emulator
-super + Return
-	st
+alt + Return
+     /usr/local/bin/st
 
 # program launcher
-super + @space
-     rofi -no-lazy-grab -show drun -show-icons -theme $HOME/.config/polybar-mine.bak/scripts/launcher.rasi
+#alt + @space
+     #rofi -no-lazy-grab -show drun -show-icons -theme $HOME/.config/polybar-mine.bak/scripts/launcher.rasi
      #rofi -combi-modi window,drun -theme android_notification -font "hack 10" -show combi -icon-theme "Numix" -show-icons
 
-super + d
-    rofi -show calc -modi calc -no-show-match -no-sort -no-bold
+#alt + c
+#    rofi -show calc -modi calc -no-show-match -no-sort -no-bold
 
-super + a
+alt + @space
+    rofi -show drun
+
+alt + a
     dmenu_run -nb '#1e1e1e' -sf '#1e1e1e' -sb '#ff33cc' -nf '#3399ff' -fn 'Wuncon Siji-10'
 
+alt + shift + @p
+    /usr/bin/rofi-pass
+
+alt + shift + @o
+    rofi -show menu -modi 'menu:~/.config/rofi/bin/rofi-power-menu'
+
 # make sxhkd reload its configuration files:
-super + Escape
+alt + Escape
 	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Config has been reloaded!'
 
 #
 # bspwm hotkeys
 #
+alt + shift + q
+  bspc node -c
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r} 
- 
+#super + alt + {q,r}
+#	bspc {quit,wm -r} 
+
+alt + ctrl + r
+  bspc wm -r
 # close and kill
 super + {_,shift + }q
 	bspc node -{c,k}
@@ -88,10 +101,12 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
+#alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}' --follow
-#alt + {1-9,0}
-#    bspc node -d '^{1-9,10}' --follow
+alt + {1-9,0}
+    bspc desktop -f '^{1-9,10}'
+alt + shift + {1-9,0}
+    bspc node -d '^{1-9,10}' --follow
 
 #
 # preselect
@@ -140,33 +155,33 @@ super + @l
 
 # screenshot
 # select screenshot
-#ctrl + shift + @p
+#ctrl + shift + p
 #    ~/.local/bin/ss-select.sh
     #~/.local/bin/screenshot.sh
 	#maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%s).png
 # full screenshot
-#control + Print
-#    ~/.local/bin/ss-full.sh
+control + Print
+    ~/.local/bin/ss-full.sh
 
 #control + super + Print
 #    ~/.local/bin/ss-window.sh
 
 # Flameshot
-super + Print
-    ~/.local/bin/flameshot-imagemagick.rb
+shift + alt + s
+    flameshot gui
 
 # Open Firefox
 ctrl + shift + f
     firefox
 
-super + p
+alt + p
     pkill -USR1 -x polybar
 
 ctrl + shift + w
-    ~/Packages/rofi-wifi-menu/rofi-wifi-menu.sh
+    /mnt/data/darm/Packages/rofi-wifi-menu/rofi-wifi-menu.sh
 
 ctrl + alt + c
-    zenity --calendar
+    zenity --calendar --title="Calendar"
 
 ctrl + alt + b
     ~/.local/bin/battery_status.sh
@@ -174,7 +189,7 @@ ctrl + alt + b
 super + shift + s 
     ~/.local/bin/word-lookup/word-lookup.sh
 
-super + w 
+alt + t
     thunar
 
 # volume control
