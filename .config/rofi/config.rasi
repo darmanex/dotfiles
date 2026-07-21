@@ -11,15 +11,15 @@ configuration {
 }
 
 
-@theme "~/.config/rofi/themes/nord2.rasi"
+@theme "~/.config/rofi/themes/rounded-nord-dark.rasi"
 
 listview {
-    lines: 15;
+    lines: 10;
     columns: 2;
 }
 
 window {
-    width: 50%;
+    width: 30%;
 }
 
 configuration {
